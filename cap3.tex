@@ -1,8 +1,153 @@
-\chapter{Etapas de desenvolvimento}
+\chapter{Desenvolvimento do sistema}
 \label{chap:etapas_desenvolvimento}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu magna cursus, mattis velit et, pulvinar lorem. Integer ut nulla eget tellus luctus pellentesque. Nullam fermentum arcu sed tristique congue. Sed ut augue a turpis imperdiet maximus vitae accumsan nisi. Fusce vitae dapibus orci. Pellentesque rutrum tincidunt turpis, id blandit libero lacinia eu. Nunc imperdiet dolor scelerisque ex tristique, nec elementum sem iaculis. Suspendisse eu leo sapien. Vivamus facilisis ultrices sollicitudin. Nunc suscipit, velit eget pretium rhoncus, erat nisl facilisis nulla, quis ultricies orci tellus sed ante. Sed pellentesque, nisl ac venenatis feugiat, augue enim consequat augue, sed porttitor sem purus in enim. Praesent vel tellus eu libero vehicula sodales. Integer tincidunt faucibus sollicitudin. Sed dapibus convallis metus, vel accumsan sem convallis ut.
+Nesta seção iremos apresentar detalhadamente os passos e ferramentas necessárias para elaboração da aplicação web Mercado Universitário. A medida que for sendo detalhado cada passo seguido, será apresentada sua finalidade e o motivo do uso das ferramentas ali utilizadas para produção do mesmo. \par
+Intencionalmente as seções estão organizadas de forma cronológica a linha de desenvolvimento da aplicação, dessa forma fica mais fácil o entendimento e execução futura dos passos necessários para validar o atual projeto por terceiros. Foi buscado não só organizar as subseções desta seção, bem como seguir uma metodologia ágil de desenvolvimento para construção do sistema web, como será apresentado na próxima subseção.
 
-\section{Arquitetura de Software}
+\section{Método ágil de desenvolvimento}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu magna cursus, mattis velit et, pulvinar lorem. Integer ut nulla eget tellus luctus pellentesque. Nullam fermentum arcu sed tristique congue. Sed ut augue a turpis imperdiet maximus vitae accumsan nisi. Fusce vitae dapibus orci. Pellentesque rutrum tincidunt turpis, id blandit libero lacinia eu. Nunc imperdiet dolor scelerisque ex tristique, nec elementum sem iaculis. Suspendisse eu leo sapien. Vivamus facilisis ultrices sollicitudin. Nunc suscipit, velit eget pretium rhoncus, erat nisl facilisis nulla, quis ultricies orci tellus sed ante. Sed pellentesque, nisl ac venenatis feugiat, augue enim consequat augue, sed porttitor sem purus in enim. Praesent vel tellus eu libero vehicula sodales. Integer tincidunt faucibus sollicitudin. Sed dapibus convallis metus, vel accumsan sem convallis ut.
+TDD(Test Driven Development) foi a metodologia ágil de desenvolvimento para produção dessa aplicação devido a vários fatores, como:
+\begin{itemize}  
+\item Necessidade de feedbacks rápidos sobre as funcionalidades implementadas sistema
+\item Como o código será open source, fica mais fácil a verificação de códigos bons e sem bugs feitos por terceiros
+\item A produtividade aumenta bastante, devido a ser fácil a detecção de bugs por meio dos testes do TDD
+\item Como será um projeto que estará constantemente sendo atualizado, fica-se mais fácil a implementação de novas funcionalidades e refactoring do observando se tal mudança afeta outras partes do sistema.
+\end{itemize}
+No projeto Mercado Universitário foi aplicado três tipos de testes automatizados fornecidos pelo TDD, os testes unitários, os testes de integração e testes de segurança da aplicação. Tais testes serão melhor detalhados na seção XXX.
+
+\section{Atores do sistema}
+
+Para que seja possível definir melhor o escopo dos requisitos do sistema(que será apresentado na seção 1.3), é preciso identificar os atores que farão parte da aplicação. Dessa forma será possível determinar e entender de maneira correta as responsabilidades de cada tipo de usuário do sistema. \par
+Cada ator terá seu nível de acesso definido na aplicação, que será percebido na coluna “responsabilidade” que se encontra no quadro 1. Como pode ser percebido no quadro 1, os tipos de atores podem realizar tarefas distintas como também tarefas que têm um mesmo propósito. \par
+Em tal projeto, inicialmente, não será necessário a presença de um ator como administrador geral do sistema devido a se tratar de um projeto piloto em uma única universidade, sem a necessidade constante de adicionar novas universidades cursos da mesma. Tal ponto será apresentado e discutido melhor na seção de trabalhos futuros que se encontra na seção XXX.
+
+\begin{tabularx}{0.9\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X | }
+ \hline
+ Ator & Descrição & Responsabilidade & Acesso a área restrita? \\
+ \hline
+ Convidado  & Qualquer pessoa do âmbito universitário que deseja comprar ou vender produtos  & Cadastrar-se como novo usuário do sistema & Não  \\
+\hline
+Cliente & Discentes, funcionários, ou moradores da região próxima a universidade & Visualizar categorias, produtos, vendedores, reviews e seus próprios pedidos; Cadastrar novos pedidos e reviews; Atualizar seus próprios reviews e dados cadastrais & Não \\
+\hline
+Vendedor & Discentes, funcionários, ou moradores da região próxima a universidade que obtém renda a partir do comércio informal & Visualizar clientes, seus pedidos e seus reviews; Cadastrar novos produtos; Atualizar seus produtos e dados cadastrais & Sim \\
+\hline
+\end{tabularx}
+
+\section{Levantamento de requisitos}
+
+O levantamento de requisitos é completamente fundamental para a elaboração do desenvolvimento desse sistema, pois é nessa fase que entende-se o problema e as necessidades dos stakeholders para propor as melhores soluções possíveis para resolução desse problema. Nesta seção iremos apresentar os requisitos funcionais e não funcionais do sistema.
+
+\subsection{Requisitos funcionais}
+
+Tais requisitos são necessários para atender as regras de negócio do sistema web, como o próprio nome já diz, são as funcionalidades do sistema.  Segundo \cite{sommerville2007engenharia}, os requisitos funcionais são as asserções de serviços que a aplicação deve proporcionar, como o sistema deve responder a entradas específicas e como o sistema deve proceder em determinadas situações. \par
+Será definidas as seguintes denominações de prioridade de implementação no sistema:
+\begin{itemize}  
+\item Essencial: requisito imprescindível para o funcionamento do sistema em que o sistema. Em sua ausência, o sistema não entra no ar.
+\item requisito em que deve ser implantado o mais rápido possível, pois sem o qual o sistema entra em funcionamento, mas de forma não satisfatória.
+\item requisito ao qual pode ser implantado sem pressa, pois não compromete o funcionamento do sistema, já que o mesmo funciona de forma satisfatória sem ele.
+\end{itemize} \par
+Não será necessário abordar todos os requisitos funcionais nesta seção, pois muitas vezes trata-se de requisitos parecidos e muitas vezes facilmente dedutíveis. Diante disso, serão apresentados apenas os principais para que tenha-se uma visão geral deles. A lista contendo todos os requisitos funcionais estará nos apêndices.
+
+\textbf{RF02 - Fazer login} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Após realizar o cadastro, o usuário estará apto a fazer o login na plataforma para ter acesso a todo o ambiente que o sistema proporciona. O login é totalmente essencial por ter a capacidade de identificar unicamente cada usuário do sistema por meio do seu email e senha, fazendo assim com que o resto do sistema traga informações relativas em relação aquele ator que acabou de logar, como por exemplo retornar apenas compras realizadas pelo ator logado. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O usuário insere suas credenciais(email e senha) e clica no botão para logar
+  \item O sistema redireciona para a página de produtos e informa que o login foi bem sucedido.
+\end{enumerate}
+
+\textbf{Secundário}
+
+\begin{enumerate}
+  \item O usuário insere suas credenciais(email e senha) e clica no botão para logar
+  \item O sistema renderiza a mesma página e informa que o login não foi bem sucedido devido a divergência nos dados cadastrais
+  \item O usuário corrige as credenciais no formulário e realiza uma nova submissão dos dados
+\end{enumerate}
+
+\subsection{Requisitos não funcionais}
+De acordo com \cite{sommerville2007engenharia}, os requisitos não funcionais são requisitos que não estão diretamente relacionados com serviços específicos oferecidos pelo sistema a seus usuários. Eles estão associados às características emergentes do sistema, como confiabilidade, tempo de resposta e ocupação de área. Na tabela 1 será apresentado os requisitos não funcionais atribuídos ao sistema.
+
+\begin{tabularx}{0.9\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X | }
+ \hline
+ Referência & Descrição & Atributo \\
+ \hline
+ RNF01 & O sistema deve ser desenvolvido utilizando a linguagem de programação Ruby na versão 2.6+. & Implementação  \\
+ \hline
+ RNF02 & A versão do framework Ruby on Rails deve ser 5.2+. & Implementação  \\
+ \hline
+ RNF03 & O sistema deve utilizar o SGBD MariaDB na versão 10.4+. & Implementação  \\
+ \hline
+ RNF04 & Deverá aparecer mensagens de sucesso, informativas e erro abaixo do navbar da aplicação utilizando cores condizentes com o tipo da mensagem. & Usabilidade  \\
+ \hline
+ RNF05 & O sistema deverá rodar em qualquer plataforma. & Implementação  \\
+ \hline
+ RNF06 & O sistema deverá ter alta disponibilidade, funcionando 24 horas por dia. & Confiabilidade  \\
+ \hline
+ RNF07 & A aplicação deve possuir segurança em operações por nível de usuário. & Segurança  \\
+ \hline
+\end{tabularx}
+
+\section{Engenharia de software}
+Nesta subseção será apresentado vários diagramas baseados em engenharia de software para ajudar a entender, agilizar e organizar todo o escopo da aplicação a ser desenvolvida.
+
+\subsection{Modelo de entidade e relacionamento}
+Para criar um sistema bem estruturado, é de suma importância que seja feito o diagrama de entidade e relacionamento do banco de dados da aplicação. Nele estará disposto todas as tabelas da aplicação, facilitando assim o desenvolvimento do sistema, isso traz consigo grande produtividade, uma vez que não será necessário grandes mudanças na estrutura a cada passo de elaboração da aplicação.
+
+A figura 6, expõe o modelo de entidade e relacionamento atual do sistema, modelo esse que passou por diversas mudanças básicas ao decorrer do desenvolvimento, como inserção e exclusão de atributos das tabelas. Essas alterações no banco são facilitadas por meio das migrations, que são técnicas e ferramentas que auxiliam o versionamento do banco de dados durante o desenvolvimento da aplicação.
+
+\\ imagem aqui (ERR)
+
+\subsection{Telas de mockup}
+Foi necessário prototipar a aplicação antes do desenvolvimento, pois com essa abordagem ficou mais fácil e objetivo o desenvolvimento do sistema. Para confecção de cada tela de mockup, foi-se utilizada a ferramenta Figma.
+
+O Figma é uma ferramenta de design de interface UI/UX. Um dos motivos para usar essa ferramenta no projeto foi devido a mesma possuir uma portabilidade muito boa, visto que roda diretamente no navegador, ou seja, é compatível com Windows, Linux e Mac. É multitarefas, ou seja, uma equipe pode explorar o mesmo projeto juntas e ver as alterações em tempo real.
+
+A elaboração dessa etapa foi de suma importância para o resultado final do projeto. Então, paara um melhor aproveitamento do dados produzidos, na seção de resultados(x.x.x) será realizada uma comparação entre as telas de mockup e o resultado final da aplicação.
+
+\subsection{Diagrama de casos de uso}
+\\ imagem aqui
+
+\subsection{Diagrama de sequência}
+\subsubsection{Cadastrar um produto}
+\\ imagem aqui
+\subsubsection{Atribuir um review}
+\\ imagem aqui
+\subsubsection{Realizar um pedido}
+\\ imagem aqui
+
+\subsection{Diagrama de classes}
+A figura 8 representa o diagrama de classes concebido para a aplicação. Todas as classes da aplicação serão derivadas da classe ApplicationRecord do framework RoR, omitida nesse diagrama por conter inúmeros atributos e métodos genéricos, ficando assim inviável para apresentação.
+
+\section{Implementação}
+O processo de desenvolvimento do sistema utilizou desde o início várias ferramentas auxiliares. Software para versionamento de código, bibliotecas da linguagem, ferramenta de mockup(como citada na seção 1.4.1) são algumas delas. Tais ferramentas contribuíram agilizar e facilitar o desenvolvimento do projeto.
+\subsection{Versionamento de código}
+O objetivo mais básico dos softwares de controle de versão é armazenar e gerenciar o histórico de alterações feitas em um arquivo, dessa forma será possível retornar a versões anteriores do seu código caso seja necessário. No projeto aqui desenvolvido foi utilizado o versionador Git. O Git pode se conectar com várias plataformas online, como por exemplo o Github, Gitlab, Bitbucket e outros.
+\subsection{Bibliotecas utilizadas}
+O Rails também conta vantagem toda a estrutura das RubyGems da linguagem de programação Ruby, que é um gerenciador de pacotes que fornece um padrão de formato para distribuição de bibliotecas, chamadas de “gem”. Várias gems foram utilizadas no atual projeto, muitas delas para facilitar o desenvolvimento, como outras que busca melhorias no código. Na seção 1.6 serão apresentados alguns testes e aplicações das gems no projeto em questão. A seguir será apresentado algumas delas:
+\subsubsection{RSpec}
+RSpec é um framework BDD(behaviour-Driven Development) de código aberto disponível em https://github.com/rspec/rspec escrito em linguagem Ruby, que permite e facilita a automatização de testes no projeto. Com o RSpec é possível implementar vários tipos de testes, são eles: testes de model, testes de controller e testes de view.
+\subsubsection{Rubocop}
+Rubocop é uma gem de código fonte aberto disponível no endereço https://github.com/rubocop-hq/rubocop que percorre e verifica se o código segue as boas práticas de programação definidas pelo guia de estilo Ruby. Tal gem ajuda a manter os padrões sem que seja preciso conhecer literalmente todas as definições.
+\subsubsection{Brakeman}
+O Brakeman é uma gem de código livre disponível pelo link https://github.com/presidentbeef/brakeman que ajuda a descobrir várias vulnerabilidades de segurança do projeto. O brakeman roda de forma totalmente automatizada, buscando falhas como SQL Injection, File Access, Mass Assignment, dentre outros. Então para ter uma aplicação segura e de qualidade é indispensável o uso dessa gem.
+
+\section{Testes automatizados}
+Esta seção avalia de forma sistemática toda a implementação técnica desenvolvida até o momento, busca uma melhor eficiência e qualidade do código da aplicação. Serão realizados quatro tipos de testes automatizados no Mercado Universitário. Testes unitários e integração, testes de segurança e testes de qualidade do código, tais testes serão apresentados a seguir.
+\subsection{Testes unitários e integração}
+Foi utilizada a gem RSpec para esse tipo de teste. Tal ferramenta foi apresentada na seção 1.5.2.1. De acordo com a imagem X foram realizados 102 exemplos de testes na aplicação, tais testes conseguiram cobrir 92.9\% de todo o código da aplicação sem que ocorresse nenhuma falha. Tal resultado se mostra bastante satisfatório, uma vez que se aproxima bastante de 100\% de cobertura do código e não apresenta nenhuma falha.
+\\ imagem aqui
+\subsection{Testes de segurança}
+Foram utilizadas duas gems para realizar esse teste de grande importância para a aplicação. A gem Brakeman em conjunto com a gem Bundle Audit são suficientes para explorar as principais vulnerabilidades das aplicações web. Como é observado nas imagens X e Y, não foram encontradas nenhuma vulnerabilidade na aplicação.
+\\ imagem aqui
+\subsection{Testes de qualidade do código}
+Para ser possível garantir uma boa manutenção e legibilidade futura do código, foi necessário utilizar a gem Rubocop(apresentada na seção 1.5.2.2). Como observado na imagem X, foram verificadas as boas práticas de programação determinadas pelo Rails em 71 arquivos do projeto, não foi encontrada nenhuma ofensa no código.
