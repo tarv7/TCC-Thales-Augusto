@@ -4,7 +4,7 @@ Essa seção tem como objetivo explicar o funcionamento de um sistema web, conhe
 Os tópicos aqui abordados servirão para nortear a metodologia proposta neste trabalho, buscando assim criar uma base sólida para os argumentos que serão apresentados. Alguns trabalhos semelhantes serão apresentados com a intenção de ajudar a contextualizar esse projeto aqui desenvolvido.
 
 
-\section{Trabalho informal}
+\section{Trabalho informal}\label{trabalho_informal}
 Não foram encontrados artigos acerca do trabalho informal dentro das universidades, mas iremos usar como base uma pesquisa sobre o trabalho informal de jovens estudantes. Dois motivos para a inserção dos estudantes no mercado de trabalho informal é ajudar na renda familiar e obter independência financeira\cite{ferreira2009trabalhojovem}. \par
 De acordo com questionário fechado e entrevistas feitas por \cite{ribeiro2005evasao}, os motivos da evasão geralmente são causados por dificuldades financeiras, vocacionais, educacionais e de dedicação. Dentre as dificuldades citadas, uma se destacou por ser o principal motivo de evasão dos estudantes entrevistado, a dificuldade financeira. Diante disso, o projeto irá atuar consistentemente em um dos motivos de evasão universitária, a dificuldade financeira, buscando assim um meio de sanar tal problema.
 
@@ -13,7 +13,7 @@ De acordo com questionário fechado e entrevistas feitas por \cite{ribeiro2005ev
 
 Na década de 1990 foi concebida uma nova tecnologia para a internet: a Tecnologia Web\cite{zaneti2005construcao}. O advento dessa nova tecnologia ocorreu devido a necessidade de formar um repositório de conhecimento humano \cite{lee1994www} e está baseada em troca de informações, visualização de documentos eletrônicos e mecanismos de armazenamento. \par
 Essa tecnologia foi criada para divulgar o conhecimento científico, porém atualmente é utilizada como meio para vários outros segmentos de informação\cite{zaneti2005construcao}. \par
-O funcionamento de um sistema de tecnologia web é fácil de ser entendido. Em um modelo cliente-servidor, o navegador faz o papel do cliente, responsável assim por fazer requisições ao servidor. Por sua vez, o servidor é responsável por receber e tratar a requisição feita pelo cliente, logo após ele irá devolver uma resposta para o mesmo\cite{sousa2016desenvolvimento}. A figura \ref{fig:web} exemplifica muito bem essa comunicação.
+O funcionamento de um sistema de tecnologia web é fácil de ser entendido. Em um modelo cliente-servidor(do inglês \textit{client-server}), o navegador faz o papel do cliente, responsável assim por fazer requisições ao servidor. Por sua vez, o servidor é responsável por receber e tratar a requisição feita pelo cliente, logo após ele irá devolver uma resposta para o mesmo\cite{sousa2016desenvolvimento}. A figura \ref{fig:web} exemplifica muito bem essa comunicação.
 
 \begin{figure}[htbp!]
   \centering
@@ -23,7 +23,7 @@ O funcionamento de um sistema de tecnologia web é fácil de ser entendido. Em u
     \label{fig:web}
 \end{figure}
 
-Uma aplicação web é um sistema projetado para ser executado em um navegador, essa é sua principal vantagem, visto que não será necessário alguns pré-requisitos como o uso de um sistema operacional em específico, por exemplo. Essa característica multiplataforma é ótima em relação a mobilidade e flexibilidade, pois em qualquer lugar/dispositivo que contém um navegador será possível acessar a aplicação. Além disso, as tecnologias para desenvolvimento web evoluíram muito, atualmente é possível fazer layouts que se adequam fielmente aos smartphones, buscando assim uma melhor experiência para o usuário\cite{pandey2013responsive}. \par
+Uma aplicação web é um sistema projetado para ser executado em um navegador, essa é sua principal vantagem, visto que não será necessário alguns pré-requisitos como o uso de um sistema operacional em específico, por exemplo. Essa característica multiplataforma é ótima em relação a mobilidade e flexibilidade, pois em qualquer lugar/dispositivo que contém um navegador será possível acessar a aplicação. Além disso, as tecnologias para desenvolvimento web evoluíram muito, atualmente é possível fazer layouts que se adéquam fielmente aos \textit{smartphones}, buscando assim uma melhor experiência para o usuário\cite{pandey2013responsive}. \par
 O sistema aqui proposto se encaixa muito bem em um modelo web, devido aos seus atores da aplicação necessitarem de portabilidade da aplicação, pois os mesmo se encontram em uma rotina corriqueira, devido ao deslocamento entre sua casa, estágio, universidade e afazeres em geral.
 
 %\subsection{Guia do beneficiamento do cacau de qualidade}
@@ -106,12 +106,12 @@ Ruby segue o princípio de pouca surpresa, isso significa que a linguagem foi co
 % \label{fig:cor_HSV}
 %\end{figure}
 
-\section{Framework}
-Em desenvolvimento de software, framework é uma concepção de vários códigos comuns entre diversos projetos, buscando assim um kit de ferramentas genéricos para ser usado de acordo com a necessidade de cada projeto a ser implementado em cima dele. Segundo Fayad e Schmidt, framework é um conjunto de classes que colaboram para realizar uma responsabilidade para um domínio de um subsistema da aplicação\cite{frameworkwikipedia}. \par
-As principais vantagens de frameworks são: maior facilidade para debugar algum erro de implementação, foco na abstração de soluções do problema proposto, eficiência na resolução dos problemas e melhora no uso dos recursos\cite{frameworkwikipedia}. \par
-O Ruby on Rails(RoR) teve sua primeira versão lançada em dezembro de 2005, foi desenvolvido pela 337Signal Inc com o objetivo de criar o projeto Basecamp, um gerenciamento colaborativo de projetos. Escrito em linguagem Ruby, Rails é um framework full-stack(ou seja, possui ferramentas para desenvolvimento frontend e backend) para desenvolvimento de aplicativos web baseados em banco de dados\cite{plekhanova2009evaluating}. \par
-Esse framework foi escolhido para o projeto por alguns motivos, tanto pessoais como técnicos. Foi levado em consideração uma forte familiaridade da equipe executante com a linguagem de programação Ruby, devido aos mesmos utilizarem ela na vida acadêmica e profissional. Diante disso, a execução do projeto seria mais ágil e eficaz. Quando comparado com outros frameworks MVC, como Laravel, Rails é um dos mais utilizados, tem atualizações frequentes e uma vasta comunidade de código aberto, nitidamente terá um futuro seguro no mundo na programação \cite{verma2014mvc}. \par
-Bootstrap é um framework web front-end de código fonte aberto, baseando-se em modelo de design, teoria das cores, tipografia e User Experience(UX) esse framework serve para criar uma identidade visual forte e amigável para sistemas web, buscando melhorar o contato do usuário com o sistema\cite{bootstrapwikipedia}. Esse framework conta atualmente com uma enorme popularidade que vem crescendo todos os dias \cite{jain2014review}. \par
+\section{\textit{Framework}}
+Em desenvolvimento de software, \textit{framework} é uma concepção de vários códigos comuns entre diversos projetos, buscando assim um kit de ferramentas genéricos para ser usado de acordo com a necessidade de cada projeto a ser implementado em cima dele. Segundo Fayad e Schmidt, framework é um conjunto de classes que colaboram para realizar uma responsabilidade para um domínio de um subsistema da aplicação\cite{frameworkwikipedia}. \par
+As principais vantagens de \textit{frameworks} são: maior facilidade para debugar algum erro de implementação, foco na abstração de soluções do problema proposto, eficiência na resolução dos problemas e melhora no uso dos recursos\cite{frameworkwikipedia}. \par
+O Ruby on Rails(RoR) teve sua primeira versão lançada em dezembro de 2005, foi desenvolvido pela 337Signal Inc com o objetivo de criar o projeto Basecamp, um gerenciamento colaborativo de projetos. Escrito em linguagem Ruby, RoR é um \textit{framework full-stack}(ou seja, possui ferramentas para desenvolvimento \textit{frontend} e \textit{backend}) para desenvolvimento de aplicativos web baseados em banco de dados\cite{plekhanova2009evaluating}. \par
+Esse \textit{framework} foi escolhido para o projeto por alguns motivos, tanto pessoais como técnicos. Foi levado em consideração uma forte familiaridade da equipe executante com a linguagem de programação Ruby, devido aos mesmos utilizarem ela na vida acadêmica e profissional. Diante disso, a execução do projeto seria mais ágil e eficaz. Quando comparado com outros \textit{frameworks}, como Laravel, RoR é um dos mais utilizados, tem atualizações frequentes e uma vasta comunidade de código aberto, nitidamente terá um futuro seguro no mundo na programação \cite{verma2014mvc}. \par
+Bootstrap é um \textit{framework web frontend} de código fonte aberto, baseando-se em modelo de design, teoria das cores, tipografia e Experiência do Usuário(UX – do inglês \textit{User Experience}) esse \textit{framework} serve para criar uma identidade visual forte e amigável para sistemas web, buscando melhorar o contato do usuário com o sistema\cite{bootstrapwikipedia}. Esse \textit{framework} conta atualmente com uma enorme popularidade que vem crescendo todos os dias \cite{jain2014review}. \par
 
 %Na próxima seção é apresentado o OpenCV e alguns algoritmos que auxiliaram no processo de segmentação e que foram analisados neste trabalho.
 
@@ -165,8 +165,8 @@ Bootstrap é um framework web front-end de código fonte aberto, baseando-se em 
 \label{sec:opencv}
 
 Segundo \cite{ceri2013logic}, “sistemas de banco de dados lidam com grandes coleções de dados compartilhados e com memória de massa e fornecem a tecnologia para suportar recuperação eficiente e atualização confiável de dados persistentes”. \par
-O banco de dados baseado no modelo relacional foi arquitetado há mais de 35 anos com o objetivo de atender ao processamento de dados, desde então, tornou-se a melhor opção para armazenar informações. O modelo não relacional(NoSQL) é baseado em arquivos e foi desenvolvido por Carlo Strozzi em 1998, modelo ao qual omite o uso da linguagem SQL(Linguagem de consulta estruturada).\cite{mohamed2014relationalvsnosql} \par
-No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda não atigiu uma maturidade completa devido ao seu surgimento recente, outro ponto é a escassez em segurança dos bancos NoSQL como demonstrado na tabela 1\cite{mohamed2014relationalvsnosql}: \par
+O banco de dados baseado no modelo relacional foi arquitetado há mais de 35 anos com o objetivo de atender ao processamento de dados, desde então, tornou-se a melhor opção para armazenar informações. O modelo Não Relacional(NoSQL) é baseado em arquivos e foi desenvolvido por Carlo Strozzi em 1998, modelo ao qual omite o uso da linguagem SQL.\cite{mohamed2014relationalvsnosql} \par
+No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda não atingiu uma maturidade completa devido ao seu surgimento recente, outro ponto é a escassez em segurança dos bancos NoSQL como demonstrado na tabela 1\cite{mohamed2014relationalvsnosql}: \par
 
 \begin{tabularx}{0.9\textwidth} { 
   | >{\raggedright\arraybackslash}X 
@@ -177,13 +177,13 @@ No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda n
  \hline
  Autenticação  & Todos os bancos de dados relacionais vieram com mecanismo de autenticação e podem escolher qualquer um desses mecanismos a serem usados.  & Muitos bancos de dados NoSQL, por padrão, não vêm com mecanismo de autenticação ou autorização, mas podem usar algum método externo para executar esta operação.  \\
 \hline
-Integridade dos dados & As propriedades ACID usadas nos bancos de dados relacionais garantem que as transações do banco de dados sejam processadas com confiabilidade, garantindo a integração dos dados. & Eventualmente consistente é um dos princípios das propriedades BASE, portanto, a integridade dos dados nem sempre é alcançada nos bancos de dados NoSQL. \\
+Integridade dos dados & As propriedades ACID(acrônimo de Atomicidade, Consistência, Isolamento e Durabilidade) usadas nos bancos de dados relacionais garantem que as transações do banco de dados sejam processadas com confiabilidade, garantindo a integração dos dados. & Eventualmente consistente é um dos princípios das propriedades BASE, portanto, a integridade dos dados nem sempre é alcançada nos bancos de dados NoSQL. \\
 \hline
 Confidencialidade & A confidencialidade dos dados geralmente é alcançada no banco de dados relacional porque foi usada técnicas de criptografia para armazenar dados criptografados. & A confidencialidade dos dados não é alcançada, porque geralmente os dados são armazenados de forma clara. \\
 \hline
 Auditoria & Fornecer mecanismos auditar que permita escrever para o arquivos syslog ou xml do banco de dados, e alguns dar uma auditoria mais avançada. & A maioria do NoSQL bancos de dados não fornecer auditoria. Existem alguns bancos de dados que fornecem auditoria com questões como Couchdb que loja o nome de usuário e senha no log arquivo que é claro compromete a segurança. \\
 \hline
-Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo seguro de comunicação com o cliente usando protocolos de criptografia e SSL. & A maioria dos bancos de dados NoSQL não oferecem mecanismos de comunicação segura com o cliente. \\
+Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo seguro de comunicação com o cliente usando protocolos de criptografia e \textit{Secure Sockets Layer}(SSL). & A maioria dos bancos de dados NoSQL não oferecem mecanismos de comunicação segura com o cliente. \\
 \hline
 \end{tabularx}
 
@@ -209,11 +209,11 @@ Engenharia de software é uma área da computação voltada à especificação, 
 
 %Para RGB -> Cinza utiliza-se a \textit{flag} Imgproc.COLOR\_BGR2GRAY e para RGB -> HSV utiliza-se a \textit{flag} cv2.COLOR\_BGR2HSV. Um exemplo de conversão de escala de cor de RGB (Figura \ref{fig:lenna_rgb}) para Cinza (Figura \ref{fig:lenna_gray}) pode ser visualizado na Figura \ref{fig:rgb2gray}.
 
-\subsection{MVC}
+\subsection{Padrão de Projeto MVC (Model View Controller)}
 \label{subsec:thresholding}
 
-O padrão MVC(model-view-controller) é um padrão de projeto(design pattern) de apresentação/abstração/controle(PAC) utilizado para arquitetar sistemas de softwares \cite{leff2001webmvc}. No paradigma MVC separa a aplicação em três tipos de objetos, cada um especializado em sua tarefa, são elas: Model, View e Controller. \par
-O Model gerencia e valida o comportamento dos dados da aplicação, conversando com o banco de dados, por exemplo. A View é a parte gráfica da aplicação ao qual irá interagir visualmente com o usuário. O Controller interpreta, ordena e responde a requisições feitas pelos usuários.\cite{burbeck1997applications} A figura \ref{fig:mvc} exemplifica muito bem a abordagem do MVC. \par
+O padrão \textit{model-view-controller}(MVC) é um padrão de projeto(do inglês \textit{design pattern}) de apresentação/abstração/controle utilizado para arquitetar sistemas de softwares \cite{leff2001webmvc}. No paradigma MVC separa a aplicação em três tipos de objetos, cada um especializado em sua tarefa, são elas: Modelo(\textit{Model}), Visão(\textit{View}) e Controlador(\textit{Controller}). \par
+O \textit{Model} gerencia e valida o comportamento dos dados da aplicação, conversando com o banco de dados, por exemplo. A \textit{View} é a parte gráfica da aplicação ao qual irá interagir visualmente com o usuário. O \textit{Controller} interpreta, ordena e responde a requisições feitas pelos usuários.\cite{burbeck1997applications} A figura \ref{fig:mvc} exemplifica muito bem a abordagem do MVC. \par
 
 \begin{figure}[htbp!]
   \centering
@@ -239,8 +239,8 @@ No projeto proposto será implementado tais testes: \par
 \end{itemize}
 Testes funcionais, de sistema, de aceitação e beta não foram incluídos devido a sua característica de necessitar pessoas independentes ao projeto para testar o software.
 
-\section{Projetos open source}
-Open Source Software(OSS) é um termo usado para designar um software desenvolvido e lançado sob algum tipo de licença de código aberto. Atualmente existem várias licenças com uma gama de características diferentes, mas todas necessitam da permissão do código fonte do software\cite{crowston2003defining}.
+\section{Projetos de código fonte aberto}
+OSS(\textit{Open Source Software}) é um termo usado para designar um software desenvolvido e lançado sob algum tipo de licença de código aberto. Atualmente existem várias licenças com uma gama de características diferentes, mas todas necessitam da permissão do código fonte do software\cite{crowston2003defining}.
 
 Algumas vantagens de projetar um OSS são:
 \begin{itemize}  
