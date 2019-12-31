@@ -13,6 +13,16 @@ Desenvolvimento Guiado a Testes(TDD - do inglês Test Driven Development) foi a 
 \item A produtividade aumenta bastante, devido a ser fácil a detecção de \textit{bugs} por meio dos testes do TDD
 \item Como será um projeto que estará constantemente sendo atualizado, fica-se mais fácil a implementação de novas funcionalidades e \textit{refactoring} do observando se tal mudança afeta outras partes do sistema.
 \end{itemize}
+
+\subsection{Bibliotecas utilizadas}
+O RoR conta vantagem com toda a estrutura das RubyGems da linguagem de programação Ruby, que é um gerenciador de pacotes que fornece um padrão de formato para distribuição de bibliotecas, chamadas de \textit{gem}. Várias \textit{gems} foram utilizadas no atual projeto, muitas delas para facilitar o desenvolvimento, como outras que busca melhorias no código. A seguir será apresentado algumas delas:
+\subsubsection{RSpec}\label{rspec}
+RSpec é um \textit{framework behaviour-Driven Development}(BDD) de código aberto disponível no Github\footnote{Gem RSpec \url{https://github.com/rspec/rspec}} escrito em Ruby, que permite e facilita a automatização de testes no projeto. Com o RSpec é possível implementar vários tipos de testes, são eles: testes de \textit{model}, testes de \textit{controller} e testes de \textit{view}.
+\subsubsection{Rubocop}\label{rubocop}
+Rubocop é uma \textit{gem} de código fonte aberto disponível no Github\footnote{Gem Rubocop \url{https://github.com/rubocop-hq/rubocop}} que percorre e verifica se o código segue as boas práticas de programação definidas pelo guia de estilo Ruby. Tal \textit{gem} ajuda a manter os padrões sem que seja preciso conhecer literalmente todas as definições.
+\subsubsection{Brakeman}\label{brakeman}
+O Brakeman é uma \textit{gem} de código livre disponível no Github \footnote{Gem Brakeman \url{https://github.com/presidentbeef/brakeman}} que ajuda a descobrir várias vulnerabilidades de segurança do projeto. O brakeman roda de forma totalmente automatizada, buscando falhas como \textit{SQL Injection, File Access, Mass Assignment}, dentre outros. Então para ter uma aplicação segura e de qualidade é indispensável o uso dessa \textit{gem}.
+
 No projeto Mercado Universitário foi aplicado três tipos de testes automatizados fornecidos pelo TDD, os testes unitários, os testes de integração e testes de segurança da aplicação. Tais testes serão melhor detalhados na seção \ref{tdd}.
 
 \section{Atores do sistema}
@@ -258,52 +268,7 @@ A figura \ref{fig:class} representa o diagrama de classes concebido para a aplic
     \label{fig:class}
 \end{figure}
 
-\section{Implementação}
-O processo de desenvolvimento do sistema utilizou desde o início várias ferramentas auxiliares. Software para versionamento de código, bibliotecas da linguagem, ferramenta de \textit{mockup}(como citada na seção \ref{mockup}) são algumas delas. Tais ferramentas contribuíram agilizar e facilitar o desenvolvimento do projeto.
-\subsection{Versionamento de código}
+\section{Versionamento de código}
+% O processo de desenvolvimento do sistema utilizou desde o início várias ferramentas auxiliares. Software para versionamento de código, bibliotecas da linguagem, ferramenta de \textit{mockup}(como citada na seção \ref{mockup}) são algumas delas. Tais ferramentas contribuíram agilizar e facilitar o desenvolvimento do projeto.
+% \subsection{Versionamento de código}
 O objetivo mais básico dos softwares de controle de versão é armazenar e gerenciar o histórico de alterações feitas em um arquivo, dessa forma será possível retornar a versões anteriores do seu código caso seja necessário. No projeto aqui desenvolvido foi utilizado o versionador Git. O Git pode se conectar com várias plataformas online, como por exemplo o Github, Gitlab, Bitbucket e outros para que o código fonte seja disponibilizado para o público em geral.
-\subsection{Bibliotecas utilizadas}
-O RoR também conta vantagem com toda a estrutura das RubyGems da linguagem de programação Ruby, que é um gerenciador de pacotes que fornece um padrão de formato para distribuição de bibliotecas, chamadas de \textit{gem}. Várias \textit{gems} foram utilizadas no atual projeto, muitas delas para facilitar o desenvolvimento, como outras que busca melhorias no código. Na seção \ref{tdd} serão apresentados alguns testes e aplicações das gems no projeto em questão. A seguir será apresentado algumas delas:
-\subsubsection{RSpec}\label{rspec}
-RSpec é um \textit{framework behaviour-Driven Development}(BDD) de código aberto disponível no Github\footnote{Gem RSpec \url{https://github.com/rspec/rspec}} escrito em Ruby, que permite e facilita a automatização de testes no projeto. Com o RSpec é possível implementar vários tipos de testes, são eles: testes de \textit{model}, testes de \textit{controller} e testes de \textit{view}.
-\subsubsection{Rubocop}\label{rubocop}
-Rubocop é uma \textit{gem} de código fonte aberto disponível no Github\footnote{Gem Rubocop \url{https://github.com/rubocop-hq/rubocop}} que percorre e verifica se o código segue as boas práticas de programação definidas pelo guia de estilo Ruby. Tal \textit{gem} ajuda a manter os padrões sem que seja preciso conhecer literalmente todas as definições.
-\subsubsection{Brakeman}\label{brakeman}
-O Brakeman é uma \textit{gem} de código livre disponível no Github \footnote{Gem Brakeman \url{https://github.com/presidentbeef/brakeman}} que ajuda a descobrir várias vulnerabilidades de segurança do projeto. O brakeman roda de forma totalmente automatizada, buscando falhas como \textit{SQL Injection, File Access, Mass Assignment}, dentre outros. Então para ter uma aplicação segura e de qualidade é indispensável o uso dessa \textit{gem}.
-
-\section{Testes automatizados}\label{tdd}
-Esta seção avalia de forma sistemática toda a implementação técnica desenvolvida até o momento, busca uma melhor eficiência e qualidade do código da aplicação. Serão realizados quatro tipos de testes automatizados no Mercado Universitário. Testes unitários e integração, testes de segurança e testes de qualidade do código, tais testes serão apresentados a seguir.
-\subsection{Testes unitários e integração}
-Foi utilizada a gem RSpec para esse tipo de teste. Tal ferramenta foi apresentada na seção \ref{rspec}. De acordo com a imagem \ref{fig:rspec} foram realizados 102 exemplos de testes na aplicação, tais testes conseguiram cobrir 92.9\% de todo o código da aplicação sem que ocorresse nenhuma falha. Tal resultado se mostra bastante satisfatório, uma vez que se aproxima bastante de 100\% de cobertura do código e não apresenta nenhuma falha.
-\begin{figure}[htbp!]
-  \centering
-  \caption{Saída do terminal para teste automatizado unitário e de integração utilizando a \textit{gem} RSpec}
-  \includegraphics[width=1\textwidth]{figs/rspec.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:rspec}
-\end{figure}
-\subsection{Testes de segurança}
-Foram utilizadas duas \textit{gems} para realizar esse teste de grande importância para a aplicação. A \textit{gem} Brakeman em conjunto com a \textit{gem} Bundle Audit são suficientes para explorar as principais vulnerabilidades das aplicações web. Como é observado nas imagens \ref{fig:brakeman} e \ref{fig:audit}, não foram encontradas nenhuma vulnerabilidade na aplicação.
-\begin{figure}[htbp!]
-  \centering
-  \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Brakeman}
-  \includegraphics[width=1\textwidth]{figs/brakeman.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:brakeman}
-\end{figure}
-\begin{figure}[htbp!]
-  \centering
-  \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Bundle Audit}
-  \includegraphics[width=1\textwidth]{figs/bundle_audit.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:audit}
-\end{figure}
-\subsection{Testes de qualidade do código}
-Para ser possível garantir uma boa manutenção e legibilidade futura do código, foi necessário utilizar a \textit{gem} Rubocop(apresentada na seção \ref{rubocop}). Como observado na imagem \ref{fig:rubocop}, foram verificadas as boas práticas de programação determinadas pelo Rails em 71 arquivos do projeto, não foi encontrada nenhuma ofensa no código.
-\begin{figure}[htbp!]
-  \centering
-  \caption{Saída do terminal para verificação da qualidade do código utilizando a gem Rubocop}
-  \includegraphics[width=1\textwidth]{figs/rubocop.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:rubocop}
-\end{figure}
