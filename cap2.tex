@@ -168,6 +168,15 @@ Segundo \cite{ceri2013logic}, “sistemas de banco de dados lidam com grandes co
 O banco de dados baseado no modelo relacional foi arquitetado há mais de 35 anos com o objetivo de atender ao processamento de dados, desde então, tornou-se a melhor opção para armazenar informações. O modelo Não Relacional(NoSQL) é baseado em arquivos e foi desenvolvido por Carlo Strozzi em 1998, modelo ao qual omite o uso da linguagem SQL.\cite{mohamed2014relationalvsnosql} \par
 No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda não atingiu uma maturidade completa devido ao seu surgimento recente, outro ponto é a escassez em segurança dos bancos NoSQL como demonstrado na tabela 1\cite{mohamed2014relationalvsnosql}: \par
 
+\begin{table}[ht]
+\centering
+\caption{Tabela de comparação entre banco de dados relacionais e não relacionais}
+\label{tab:sqlvsnosql}
+\begin{flushright}
+\footnotesize
+(continua)
+\end{flushright}
+\resizebox{\textwidth}{!}{%
 \begin{tabularx}{0.9\textwidth} { 
   | >{\raggedright\arraybackslash}X 
   | >{\raggedright\arraybackslash}X 
@@ -178,6 +187,25 @@ No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda n
  Autenticação  & Todos os bancos de dados relacionais vieram com mecanismo de autenticação e podem escolher qualquer um desses mecanismos a serem usados.  & Muitos bancos de dados NoSQL, por padrão, não vêm com mecanismo de autenticação ou autorização, mas podem usar algum método externo para executar esta operação.  \\
 \hline
 Integridade dos dados & As propriedades ACID(acrônimo de Atomicidade, Consistência, Isolamento e Durabilidade) usadas nos bancos de dados relacionais garantem que as transações do banco de dados sejam processadas com confiabilidade, garantindo a integração dos dados. & Eventualmente consistente é um dos princípios das propriedades BASE, portanto, a integridade dos dados nem sempre é alcançada nos bancos de dados NoSQL. \\
+\end{tabularx}%
+}
+\end{table}
+\pagebreak
+
+\begin{table}[ht]
+\centering
+Tabela \ref{tab:sqlvsnosql} – Tabela de comparação entre banco de dados relacionais e não relacionais
+\begin{flushright}
+\footnotesize
+(conclusão)
+\end{flushright}
+\resizebox{\textwidth}{!}{%
+\begin{tabularx}{0.9\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X | }
+ \hline
+ Categoria & Modelo relacional & Modelo não-relacional \\
 \hline
 Confidencialidade & A confidencialidade dos dados geralmente é alcançada no banco de dados relacional porque foi usada técnicas de criptografia para armazenar dados criptografados. & A confidencialidade dos dados não é alcançada, porque geralmente os dados são armazenados de forma clara. \\
 \hline
@@ -185,7 +213,9 @@ Auditoria & Fornecer mecanismos auditar que permita escrever para o arquivos sys
 \hline
 Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo seguro de comunicação com o cliente usando protocolos de criptografia e \textit{Secure Sockets Layer}(SSL). & A maioria dos bancos de dados NoSQL não oferecem mecanismos de comunicação segura com o cliente. \\
 \hline
-\end{tabularx}
+\end{tabularx}%
+}
+\end{table}
 
 %OpenCV-Python é uma API Python para OpenCV, combinando as melhores qualidades da API OpenCV para C++ e a linguagem Python \cite{opencv_python_api}.
 
@@ -257,6 +287,7 @@ Algumas vantagens de projetar um OSS são:
 Foram pesquisados alguns trabalhos, porém nenhum se encaixou perfeitamente com os objetivos do projeto aqui desenvolvido. Entretanto, alguns projetos têm cunho semelhante. \par
 O sistema Ifood é usado para delivery de comida, buscando conectar vendedores com clientes. Disponível para plataformas Android, IOS e web o sistema recebe mais de 6,2 milhões de pedidos mensais\cite{bastos2018marketing}. Após efetuar seu login, o cliente pode realizar seu pedido informando a localização onde deseja que a entrega seja feita. A forma de pagamento pode ser feita pelo próprio sistema. A figura \ref{fig:ifood} apresenta o fluxo básico para realizar e acompanhar pedidos realizados pelo aplicativo.
 
+\pagebreak
 \begin{figure}[htbp!]
   \centering
   \caption{Fluxo de uso do aplicativo ifood}

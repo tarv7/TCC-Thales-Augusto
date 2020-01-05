@@ -31,6 +31,11 @@ Para que seja possível definir melhor o escopo dos requisitos do sistema(que se
 Cada ator terá seu nível de acesso definido na aplicação, que será percebido na coluna “responsabilidade” que se encontra no quadro 1. Como pode ser percebido no quadro 1, os tipos de atores podem realizar tarefas distintas como também tarefas que têm um mesmo propósito. \par
 Em tal projeto, inicialmente, não será necessário a presença de um ator como administrador geral do sistema devido a se tratar de um projeto piloto em uma única universidade, sem a necessidade constante de adicionar novas universidades e cursos da mesma. Tal ponto será apresentado e discutido melhor na seção de trabalhos futuros que se encontra na seção XXX.
 
+\begin{table}[ht]
+\centering
+\caption{Tabela de atores do sistema}
+\label{tab:atores}
+\resizebox{\textwidth}{!}{%
 \begin{tabularx}{0.9\textwidth} { 
   | >{\raggedright\arraybackslash}X 
   | >{\raggedright\arraybackslash}X 
@@ -45,7 +50,9 @@ Cliente & Discentes, funcionários, ou moradores da região próxima a universid
 \hline
 Vendedor & Discentes, funcionários, ou moradores da região próxima a universidade que obtém renda a partir do comércio informal & Visualizar clientes, seus pedidos e seus \textit{reviews}; Cadastrar novos produtos; Atualizar seus produtos e dados cadastrais & Sim \\
 \hline
-\end{tabularx}
+\end{tabularx}%
+}
+\end{table}
 
 \section{Levantamento de requisitos}\label{requisitos}
 
@@ -167,6 +174,15 @@ Não será necessário abordar todos os requisitos funcionais nesta seção, poi
 \subsection{Requisitos não funcionais}
 De acordo com \cite{sommerville2007engenharia}, os requisitos não funcionais são requisitos que não estão diretamente relacionados com serviços específicos oferecidos pelo sistema a seus usuários. Eles estão associados às características emergentes do sistema, como confiabilidade, tempo de resposta e ocupação de área. Na tabela 1 será apresentado os requisitos não funcionais atribuídos ao sistema.
 
+\begin{table}[ht]
+\centering
+\caption{Tabela de requisitos não funcionais do sistema}
+\label{tab:naofuncionais}
+\begin{flushright}
+\footnotesize
+(continua)
+\end{flushright}
+\resizebox{\textwidth}{!}{%
 \begin{tabularx}{0.9\textwidth} { 
   | >{\raggedright\arraybackslash}X 
   | >{\raggedright\arraybackslash}X 
@@ -185,10 +201,34 @@ De acordo com \cite{sommerville2007engenharia}, os requisitos não funcionais s�
  RNF05 & O sistema deverá rodar em qualquer plataforma. & Implementação  \\
  \hline
  RNF06 & O sistema deverá ter alta disponibilidade, funcionando 24 horas por dia. & Confiabilidade  \\
+\end{tabularx}%
+}
+\end{table}
+
+\begin{table}[ht]
+\centering
+Tabela \ref{tab:naofuncionais} – Tabela de requisitos não funcionais do sistema
+\begin{flushright}
+\footnotesize
+(conclusão)
+\end{flushright}
+\resizebox{\textwidth}{!}{%
+\begin{tabularx}{0.9\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X | }
+ \hline
+ Referência & Descrição & Atributo \\
  \hline
  RNF07 & A aplicação deve possuir segurança em operações por nível de usuário. & Segurança  \\
  \hline
-\end{tabularx}
+\end{tabularx}%
+}
+\end{table}
+
+
+%  \hline
+%  RNF07 & A aplicação deve possuir segurança em operações por nível de usuário. & Segurança  \\
 
 \section{Engenharia de software}
 Nesta subseção será apresentado vários diagramas baseados em engenharia de software para ajudar a entender, agilizar e organizar todo o escopo da aplicação a ser desenvolvida.
@@ -268,7 +308,7 @@ A figura \ref{fig:class} representa o diagrama de classes concebido para a aplic
     \label{fig:class}
 \end{figure}
 
-\section{Versionamento de código}
+\section{Versionamento do código}
 % O processo de desenvolvimento do sistema utilizou desde o início várias ferramentas auxiliares. Software para versionamento de código, bibliotecas da linguagem, ferramenta de \textit{mockup}(como citada na seção \ref{mockup}) são algumas delas. Tais ferramentas contribuíram agilizar e facilitar o desenvolvimento do projeto.
 % \subsection{Versionamento de código}
 O objetivo mais básico dos softwares de controle de versão é armazenar e gerenciar o histórico de alterações feitas em um arquivo, dessa forma será possível retornar a versões anteriores do seu código caso seja necessário. No projeto aqui desenvolvido foi utilizado o versionador Git. O Git pode se conectar com várias plataformas online, como por exemplo o Github, Gitlab, Bitbucket e outros para que o código fonte seja disponibilizado para o público em geral.
