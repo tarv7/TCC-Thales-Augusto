@@ -11,16 +11,320 @@
 \partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+\chapter{Lista de todos os requisitos funcionais do sistema}
 % ----------------------------------------------------------
 
-\lipsum[50]
+Devido a grande quantidade, foi preciso apresentar nos apêndices a lista contendo todos os requisitos funcionais do sistema Mercado Universitário. Segue abaixo a lista.
+
+\textbf{RF01 - Cadastrar usuário} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Convidado \par
+\textbf{Descrição:} Qualquer pessoa que acessa o sistema, seja um discente, funcionário, professor, ou pessoas que vivem no âmbito universitário podem se cadastrar no sistema como um cliente por meio do formulário público que se encontra na página inicial da aplicação. Será necessário que o ator convidado preencha corretamente os dados obrigatórios cumprindo suas respectivas validações, caso contrário o próprio sistema irá apontar o erro para ser sanado. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O ator insere as informações de cadastro solicitadas, como email, senha, nome, universidade, curso, whatsapp e foto de perfil.
+  \item O sistema fará login automaticamente no sistema informando que o usuário foi cadastrado com sucesso.
+\end{enumerate} \par
+\textbf{Secundário} \par
+\begin{enumerate}
+  \item O ator insere as informações de cadastro solicitadas, como email, senha, nome, universidade, curso, whatsapp e foto de perfil.
+  \item O sistema renderiza a mesma página informando que os dados submetidos não foram cumprem algumas validações e identifica onde está os erros no formulário.
+  \item O ator corrige os dados e submete novamente o cadastro para o sistema.
+\end{enumerate}
+
+\textbf{RF02 - Fazer login} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Após realizar o cadastro, o usuário estará apto a fazer o login na plataforma para ter acesso a todo o ambiente que o sistema proporciona. O login é totalmente essencial por ter a capacidade de identificar unicamente cada usuário do sistema por meio do seu e-mail e senha, fazendo assim com que o resto do sistema traga informações relativas em relação aquele ator que acabou de logar, como por exemplo retornar apenas compras realizadas pelo ator logado. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O usuário insere suas credenciais(e-mail e senha) e clica no botão para logar
+  \item O sistema redireciona para a página de produtos e informa que o login foi bem sucedido.
+\end{enumerate}
+
+\textbf{RF03 - Visualizar categorias dos produtos} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Todos os produtos da aplicação estão atrelados a uma categoria específica, isso facilita bastante a busca por um determinado item. Existirá diversas categorias, como por exemplo, alimentos, roupas, acessórios, bebidas, dentre outros. É possível filtrar a lista de categorias por meio de pesquisa. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O usuário seleciona a opção “categorias” por meio do navbar da aplicação.
+  \item O sistema direciona para uma página mostrando as categorias do sistema não extrapolando o limite máximo determinado pela paginação.
+\end{enumerate} \par
+\textbf{Secundário} \par
+\begin{enumerate}
+  \item O usuário seleciona a opção “categorias” por meio do navbar da aplicação.
+  \item Por meio da caixa de pesquisa o usuário digita o nome(ou parte dele) da categoria que deseja buscar.
+  \item A mesma página é renderizada mostrando apenas as categorias que condizem com a palavra-chave digitada pelo usuário.
+\end{enumerate}
+
+\textbf{RF04 - Visualizar lista vendedores} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Todos os vendedores que realizam entregas/vendas na mesma universidade em que o cliente se encontra serão listados. Facilitando assim explorar os diversos vendedores que atuam na universidade. É possível filtrar a lista de vendedores por meio de pesquisa. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O usuário seleciona a opção “vendedores” por meio do navbar da aplicação.
+  \item O sistema direciona para uma página mostrando todos os vendedores da universidade, não extrapolando o limite máximo determinado pela paginação.
+\end{enumerate} \par
+\textbf{Secundário} \par
+\begin{enumerate}
+  \item O usuário seleciona a opção “vendedores” por meio do navbar da aplicação.
+  \item Por meio da caixa de pesquisa o usuário digita o nome(ou parte dele) do vendedor que pretende buscar.
+  \item A mesma página é renderizada mostrando apenas os vendedores que condizem com a palavra-chave digitada pelo usuário e que atuam na universidade do usuário.
+\end{enumerate}
+
+\textbf{RF05 - Visualizar lista de produtos} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente e Vendedor \par
+\textbf{Descrição:} O sistema deve ser capaz de listar os produtos relacionado ao ator em questão. Pode ser uma listagem de todos os produtos da universidade, todos os produtos de uma categoria específica, ou todos os produtos de um vendedor específico. Não será possível ser listado que um vendedor consiga listar produtos de outros vendedores. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente seleciona a uma categoria de produtos.
+  \item Será listado todos os produtos da universidade do cliente que sejam da categoria selecionada.
+\end{enumerate}
+
+\textbf{RF06 - Visualizar produto} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente e Vendedor \par
+\textbf{Descrição:} Será possível a visualização de um produto específico de um determinado vendedor, mostrando sua foto e descrição, bem como a opção de adicionar este produto ao carrinho de compras. Caso o ator seja um vendedor, aparecerá a opção de editar ou remover o produto em questão. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O ator escolherá um produto específico a partir de uma lista.
+  \item Será direcionado para a página específica do produto.
+  \item O ator visualiza o produto e poderá interagir com ele de acordo com seu perfil.
+\end{enumerate}
+
+\textbf{RF07 - Visualizar vendedor} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente e Vendedor \par
+\textbf{Descrição:} O cliente conseguirá acessar a página específica de qualquer vendedor da sua universidade, nesta página será possível ter acesso ao instagram, whatsapp, descrição, se faz entrega ou não, se está aberto ou não, e reviews do vendedor em questão. Todavia, caso o ator seja um vendedor, ele só poderá acessar sua própria página. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente clica em um dos vendedores da lista de vendedores da sua universidade.
+  \item Será redirecionado para a página específica do vendedor que clicou.
+  \item Nesta página terá acesso ao dados do vendedor.
+\end{enumerate}
+
+\textbf{RF08 - Cadastrar \textit{review} de um vendedor} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} O cliente poderá compartilhar sua opinião acerca de algum vendedor por meio da página de cadastro de \textit{review}, colocando em um formulário a descrição e nota(entre 1 e 5, inclusos) do vendedor. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente acessa a página específica do vendedor
+  \item Clica no link “deixe sua opinião!”
+  \item Será redirecionado para página de cadastro de \textit{review}
+  \item Preenche o formulário
+  \item Submete os dados
+  \item Será redirecionado para página do vendedor informando que a operação foi bem sucedida
+\end{enumerate}
+
+\textbf{RF09 - Atualizar review de um vendedor} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Apenas o cliente que cadastrou o review poderá atualizá-lo. O formulário será o mesmo utilizado para cadastrar, porém dessa vez será realizada uma operação de atualização. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente acessa a página do vendedor ao qual deseja atualizar seu review.
+  \item Clica no link “edite sua opinião”.
+  \item Será redirecionado para página de editar review.
+  \item Altera seu review no formulário.
+  \item Submete os novos dados.
+  \item Será redirecionado para página do vendedor sendo informado que a operação foi bem sucedida.
+\end{enumerate}
+
+\textbf{RF10 - Adicionar produto ao carrinho de compras} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Para compor um pedido, é necessário adicionar produtos ao pedido. O cliente poderá fazer isso diretamente na página do produto em que deseja comprar, colocando assim a quantidade desejada e clicando em “adicionar produto”. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item Na página do produto, o cliente insere a quantidade do produto para ser adicionado
+  \item Clica em “adicionar produto“
+  \item Será redirecionado para página de produto com a notificação informando que a operação foi bem sucedida
+\end{enumerate}
+
+\textbf{RF11 - Visualizar pedidos} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente e vendedor \par
+\textbf{Descrição:} Por meio do link “meus pedidos” na navbar será possível visualizar a lista de pedidos feitos(já realizados e que estão a realizar) pelo cliente. O vendedor conseguirá acessar a página pelo mesmo link do cliente, entretanto será mostrado apenas os pedidos já recebidos pelo vendedor, independentemente do status da compra ao qual o pedido se encontra. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente acessa a página de pedidos pelo link do navbar
+  \item Será renderizado duas sessões de lista de pedidos: pedidos já realizados e pedidos em aberto
+  \item O cliente terá a opção de realizar os pedidos em aberto
+\end{enumerate}
+
+\textbf{RF12 - Cadastrar conta de vendedor} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Para se tornar um vendedor, necessariamente é preciso que o ator seja um cliente, para então realizar o devido cadastro da conta. Só será possível uma conta de vendedor para cada conta cliente. O link denominado “seja um vendedor” para cadastro da conta estará disponível no navbar da aplicação. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente clica no link “seja um vendedor” no navbar
+  \item Será redirecionado para a página com um formulário para inserir os dados do vendedor
+  \item Preenche os campos
+  \item Submete os dados para ser cadastrado no banco de dados
+  \item É redirecionado para a área restrita sendo informado que o cadastro foi realizado com sucesso
+\end{enumerate}
+
+\textbf{RF13 - Acessar área restrita} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Vendedor \par
+\textbf{Descrição:} Ao realizar o login na aplicação, o usuário acessa automaticamente a área do cliente. Se o cliente tem uma conta de vendedor, aparecerá um link denominado “Área restrita” na navbar, no mesmo local onde aparece “seja um vendedor” para os  clientes que não tem uma conta de vendedor. Ao clicar neste link, o ator será redirecionado para a área restrita para vendedores, onde poderá administrar os produtos e controle de produtos. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O ator clica no link “Área restrita”
+  \item Será redirecionado para a página de produtos da área restrita
+\end{enumerate}
+
+\textbf{RF14 - Cadastrar produto} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Vendedor \par
+\textbf{Descrição:} Como o intuito básico da aplicação será venda de produtos, será possível que cada vendedor insira seus produtos na plataforma por meio de um formulário, informando o nome, descrição, valor e foto do produto em questão. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item Na página de listagem dos seus produtos, o vendedor clicará no link “Inserir novo produto”.
+  \item Será redirecionado para a página que contém o formulário.
+  \item Preenche todos os campos.
+  \item Submete o formulário.
+  \item Será redirecionado para a página do produto criado sendo informado que a operação foi concluída com sucesso.
+\end{enumerate} \par
+\textbf{Secundário} \par
+\begin{enumerate}
+  \item Na página de listagem dos seus produtos, o vendedor clicará no link “Inserir novo produto”.
+  \item Será redirecionado para a página que contém o formulário.
+  \item Preenche todos os campos.
+  \item Submete o formulário.
+  \item A mesma página é renderizada informando que contém campos inválidos no formulário.
+  \item O vendedor corrige os campos inválidos e submete novamente.
+\end{enumerate}
+
+\textbf{RF15 - Editar produto} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Vendedor \par
+\textbf{Descrição:} Quando o vendedor possui produtos cadastrados, é possível editá-los facilmente. Para isso é preciso acessar a página do produto a ser editado e clicar no link “editar”. Cada vendedor poderá editar apenas seus próprios produtos. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O vendedor acessa a página do produto a ser editado.
+  \item Clica no link “Editar”.
+  \item Será redirecionado para página que contém o formulário.
+  \item Altera os dados que desejar.
+  \item Submete as alterações do formulário.
+  \item Será redirecionado para a página do produto sendo informado que as alterações foram efetivadas.
+\end{enumerate} \par
+\textbf{Secundário} \par
+\begin{enumerate}
+  \item O vendedor acessa a página do produto a ser editado.
+  \item Clica no link “Editar”.
+  \item Será redirecionado para página que contém o formulário.
+  \item Altera os dados que desejar.
+  \item Submete as alterações do formulário.
+  \item Será renderizada a mesma página sendo informado que existem dados inválidos.
+  \item O vendedor corrige os dados inválidos e submete novamente o formulário.
+\end{enumerate}
+
+\textbf{RF16 - Realizar pedido de compra} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} O ato de realizar o pedido é um recurso fundamental para a aplicação. Este requisito efetua a conexão entre um cliente e o vendedor(que no caso seria o fornecedor dos produtos do pedido em questão). Nessa etapa será possível deixar um recado para o vendedor e selecionar o local de entrega(caso o vendedor realize entregas). \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente clicará no link “meus pedidos” no navbar
+  \item Será redirecionado para a página com a lista de pedidos fechados e abertos
+  \item Preencherá um recado para o vendedor
+  \item Escolherá o tipo de entrega/local do pedido
+  \item Realiza o pedido clicando no botão “realizar pedido”
+  \item Será renderizada a mesma página informando que o pedido foi efetivado
+\end{enumerate}
+
+\textbf{RF17 - Atualizar status do pedido} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Vendedor \par
+\textbf{Descrição:} O controle do status da compra é útil para que o cliente saiba em qual etapa seu pedido se encontra, são elas: não visto, preparando, a caminho, entregue, cancelado. O vendedor deverá alterar esse status de maneira condizente. Esse controle de status também facilitará a organização do vendedor, sendo que fica mais fácil o controle de todos seus pedidos correntes. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O vendedor clica no link “meus pedidos” na navbar.
+  \item Será redirecionado para a página listando os pedidos.
+  \item O vendedor altera o status de algum pedido da lista por meio select.
+  \item A mesma página será renderizada informando que o status foi alterado.
+\end{enumerate}
+
+\textbf{RF18 - Visualizar usuários} \par
+\textbf{Prioridade:} Essencial \par
+\textbf{Atores:} Vendedor \par
+\textbf{Descrição:} Para uma maior eficácia na entrega dos pedidos, é necessário que o vendedor tenha informações básicas sobre o cliente que fez o pedido. Essas informações básicas podem ser obtidas por meio da página individual do cliente, a qual contém informações como: foto, nome, curso, semestre e whatsapp do cliente. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O vendedor clica no link com o nome do cliente que está página de lista de pedidos.
+  \item Será redirecionado para a página individual do cliente.
+\end{enumerate}
+
+\textbf{RF19 - Recuperar senha do login} \par
+\textbf{Prioridade:} Importante \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} Para que não seja impossibilitado o acesso ao sistema pelo motivo de ter esquecido a senha de login, se mostra importante o mecanismo automatizado para recuperar as senhas. Diante disso, o sistema contará com essa facilidade, bastando colocar o email de recuperação e um link para geração da nova senha ser enviado para o email da pessoa solicitante. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O usuário acessa a página inicial.
+  \item Clica no link de recuperação de senha.
+  \item Solicita recuperação com seu email.
+  \item Clica no link recebido no seu email.
+  \item Cadastra a nova senha.
+\end{enumerate}
+
+\textbf{RF20 - Confirmação de recebimento da entrega} \par
+\textbf{Prioridade:} Importante \par
+\textbf{Atores:} Cliente \par
+\textbf{Descrição:} É importante que os clientes confirmem o recebimento de entrega dos produtos, isso ajudará o controle interno do vendedor, bem como o próprio cliente futuramente. Esse função estará disponível na página de pedidos do sistema, bastando um clique para confirmar recebimento em pedidos que constam com o status “entregue”. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O cliente acessa a página de pedidos.
+  \item Localiza o pedido com status “entregue” cadastrado pelo vendedor.
+  \item Clica no botão de confirmação.
+  \item A página será novamente renderizada com o pedido confirmado.
+\end{enumerate}
+
+\textbf{RF21 - Línguas estrangeiras} \par
+\textbf{Prioridade:} Desejável \par
+\textbf{Atores:} Cliente e Vendedor \par
+\textbf{Descrição:} Por ter um nicho universitário, muitas das vezes pessoas de outros países tem contato com esse âmbito, pessoas essas que podem não falar o idioma português. Dessa forma, é desejável que o sistema seja bilíngue, suportando o idioma nativo(português) e um idioma bastante difundido(inglês). A mudança de idioma ocorrerá a qualquer momento de uso do sistema, bastando um clique para que os textos estáticos da aplicação alterne entre tais idiomas. \par
+\textbf{Fluxo de eventos:} \par
+\textbf{Principal} \par
+\begin{enumerate}
+  \item O usuário acessa a aplicação
+  \item Clica na bandeira referente ao idioma desejado
+  \item A página é renderizada com o novo idioma
+\end{enumerate}
+
+% \lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
+% \chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+% ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+% % ----------------------------------------------------------
+% \lipsum[55-57]
 
 \end{apendicesenv}
 % ---
