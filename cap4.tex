@@ -1,42 +1,138 @@
 \chapter{Resultados e discussões}
 \label{chap:resultados}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu magna cursus, mattis velit et, pulvinar lorem. Integer ut nulla eget tellus luctus pellentesque. Nullam fermentum arcu sed tristique congue. Sed ut augue a turpis imperdiet maximus vitae accumsan nisi. Fusce vitae dapibus orci. Pellentesque rutrum tincidunt turpis, id blandit libero lacinia eu. Nunc imperdiet dolor scelerisque ex tristique, nec elementum sem iaculis.
+Essa seção abordará os resultados alcançados em relação aos objetivos que foram propostos na seção XXX e seção XXX.
 
+Com o resultado desse trabalho, a comunidade acadêmica passa a dispor e utilizar um sistema web que facilita o fluxo de mercância. A interface idealizada do sistema foi alcançada em sua maior parte, bem como a disponibilização do código fonte.
 
-\section{Testes automatizados}\label{tdd}
-Esta seção avalia de forma sistemática toda a implementação técnica desenvolvida até o momento, busca uma melhor eficiência e qualidade do código da aplicação. Serão realizados quatro tipos de testes automatizados no Mercado Universitário. Testes unitários e integração, testes de segurança e testes de qualidade do código, tais testes serão apresentados a seguir.
-\subsection{Testes unitários e integração}
-Foi utilizada a gem RSpec para esse tipo de teste. Tal ferramenta foi apresentada na seção \ref{rspec}. De acordo com a imagem \ref{fig:rspec} foram realizados 102 exemplos de testes na aplicação, tais testes conseguiram cobrir 92.9\% de todo o código da aplicação sem que ocorresse nenhuma falha. Tal resultado se mostra bastante satisfatório, uma vez que se aproxima bastante de 100\% de cobertura do código e não apresenta nenhuma falha.
+O sistema proposto foi totalmente desenvolvido de acordo com seus diagramas e requisitos apresentados na seção XXX. Buscou-se fazer um sistema robusto em que \textit{queries} ao banco de dados fossem pouco custosas para que o servidor não ficasse sobrecarregado devido as consultadas simultâneas dos usuários.
+
+Já disponibilizado para uso, o sistema foi calorosamente acolhido pelas pessoas que compõem o âmbito universitário. O link de acesso para o projeto é \url{http://www.mercadouniversitario.com}, onde será possível realizar o cadastro público para ter acesso aos produtos comercializados, bem como realizar outro cadastro para adquirir uma conta de vendedor, para assim divulgar algum produto ao qual deseja-se vender.
+
+A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resultado alcançado e o mockup proposto para que seja feita uma melhor análise. As figuras A corresponderão as telas de mockup propostas antes do início do desenvolvimento, já as figuras B serão as mesmas telas alcançadas como resultado.
+
 \begin{figure}[htbp!]
   \centering
-  \caption{Saída do terminal para teste automatizado unitário e de integração utilizando a \textit{gem} RSpec}
-  \includegraphics[width=1\textwidth]{figs/rspec.png}
+  \caption{(A) Tela de login proposta}
+  \includegraphics[width=1\textwidth]{figs/mockup/login.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:rspec}
+    \label{fig:err}
 \end{figure}
-\subsection{Testes de segurança}
-Foram utilizadas duas \textit{gems} para realizar esse teste de grande importância para a aplicação. A \textit{gem} Brakeman em conjunto com a \textit{gem} Bundle Audit são suficientes para explorar as principais vulnerabilidades das aplicações web. Como é observado nas imagens \ref{fig:brakeman} e \ref{fig:audit}, não foram encontradas nenhuma vulnerabilidade na aplicação.
+
 \begin{figure}[htbp!]
   \centering
-  \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Brakeman}
-  \includegraphics[width=1\textwidth]{figs/brakeman.png}
+  \caption{(B) Tela de login obtida como resultado}
+  \includegraphics[width=1\textwidth]{figs/resultado/login.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:brakeman}
+    \label{fig:err}
 \end{figure}
+
 \begin{figure}[htbp!]
   \centering
-  \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Bundle Audit}
-  \includegraphics[width=1\textwidth]{figs/bundle_audit.png}
+  \caption{(A) Tela de produtos proposta}
+  \includegraphics[width=1\textwidth]{figs/mockup/produtos.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:audit}
+    \label{fig:err}
 \end{figure}
-\subsection{Testes de qualidade do código}
-Para ser possível garantir uma boa manutenção e legibilidade futura do código, foi necessário utilizar a \textit{gem} Rubocop(apresentada na seção \ref{rubocop}). Como observado na imagem \ref{fig:rubocop}, foram verificadas as boas práticas de programação determinadas pelo Rails em 71 arquivos do projeto, não foi encontrada nenhuma ofensa no código.
+
 \begin{figure}[htbp!]
   \centering
-  \caption{Saída do terminal para verificação da qualidade do código utilizando a gem Rubocop}
-  \includegraphics[width=1\textwidth]{figs/rubocop.png}
+  \caption{(B) Tela de produtos obtida como resultado}
+  \includegraphics[width=1\textwidth]{figs/resultado/produtos.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:rubocop}
+    \label{fig:err}
 \end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \caption{(A) Tela individual de produto proposta}
+  \includegraphics[width=1\textwidth]{figs/mockup/produto.jpg}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:err}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \caption{(B) Tela individual de produto obtida como resultado}
+  \includegraphics[width=1\textwidth]{figs/resultado/produto.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:err}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \caption{(A) Tela individual do vendedor proposta}
+  \includegraphics[width=1\textwidth]{figs/mockup/vendedor.jpg}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:err}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \caption{(B) Tela individual do vendedor obtida como resultado}
+  \includegraphics[width=1\textwidth]{figs/resultado/vendedor.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:err}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \caption{(A) Tela de pedidos proposta}
+  \includegraphics[width=1\textwidth]{figs/mockup/carrinho.jpg}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:err}
+\end{figure}
+
+\begin{figure}[htbp!]
+  \centering
+  \caption{(B) Tela de pedidos obtida como resultado}
+  \includegraphics[width=1\textwidth]{figs/resultado/carrinho.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:err}
+\end{figure}
+
+% \begin{figure}[htbp!]
+% \centering
+% \caption{Comparativo entre tela de login proposta e final}
+% \subfloat[ADICIONAR UMA ILUSTRAÇÃO DA FORMA DE CAPTURA]{\includegraphics[width=0.48\textwidth]{figs/mockup/login.jpg}\label{fig:ilustracao_forma_aquisicao_imagem}}
+% \hfill
+% \subfloat[Imagem obtida com a utilização da câmera e flash forçado]{\includegraphics[width=0.48\textwidth]{figs/resultado/login.png}\label{fig:imagem_adquirida_camera}}
+% \legend{Fonte: Elaborada pelo autor}
+% \end{figure}
+
+% \section{Testes automatizados}\label{tdd}
+% Esta seção avalia de forma sistemática toda a implementação técnica desenvolvida até o momento, busca uma melhor eficiência e qualidade do código da aplicação. Serão realizados quatro tipos de testes automatizados no Mercado Universitário. Testes unitários e integração, testes de segurança e testes de qualidade do código, tais testes serão apresentados a seguir.
+% \subsection{Testes unitários e integração}
+% Foi utilizada a gem RSpec para esse tipo de teste. Tal ferramenta foi apresentada na seção \ref{rspec}. De acordo com a imagem \ref{fig:rspec} foram realizados 102 exemplos de testes na aplicação, tais testes conseguiram cobrir 92.9\% de todo o código da aplicação sem que ocorresse nenhuma falha. Tal resultado se mostra bastante satisfatório, uma vez que se aproxima bastante de 100\% de cobertura do código e não apresenta nenhuma falha.
+% \begin{figure}[htbp!]
+%   \centering
+%   \caption{Saída do terminal para teste automatizado unitário e de integração utilizando a \textit{gem} RSpec}
+%   \includegraphics[width=1\textwidth]{figs/rspec.png}
+%     \legend{Fonte: Elaborada pelo autor.}
+%     \label{fig:rspec}
+% \end{figure}
+% \subsection{Testes de segurança}
+% Foram utilizadas duas \textit{gems} para realizar esse teste de grande importância para a aplicação. A \textit{gem} Brakeman em conjunto com a \textit{gem} Bundle Audit são suficientes para explorar as principais vulnerabilidades das aplicações web. Como é observado nas imagens \ref{fig:brakeman} e \ref{fig:audit}, não foram encontradas nenhuma vulnerabilidade na aplicação.
+% \begin{figure}[htbp!]
+%   \centering
+%   \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Brakeman}
+%   \includegraphics[width=1\textwidth]{figs/brakeman.png}
+%     \legend{Fonte: Elaborada pelo autor.}
+%     \label{fig:brakeman}
+% \end{figure}
+% \begin{figure}[htbp!]
+%   \centering
+%   \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Bundle Audit}
+%   \includegraphics[width=1\textwidth]{figs/bundle_audit.png}
+%     \legend{Fonte: Elaborada pelo autor.}
+%     \label{fig:audit}
+% \end{figure}
+% \subsection{Testes de qualidade do código}
+% Para ser possível garantir uma boa manutenção e legibilidade futura do código, foi necessário utilizar a \textit{gem} Rubocop(apresentada na seção \ref{rubocop}). Como observado na imagem \ref{fig:rubocop}, foram verificadas as boas práticas de programação determinadas pelo Rails em 71 arquivos do projeto, não foi encontrada nenhuma ofensa no código.
+% \begin{figure}[htbp!]
+%   \centering
+%   \caption{Saída do terminal para verificação da qualidade do código utilizando a gem Rubocop}
+%   \includegraphics[width=1\textwidth]{figs/rubocop.png}
+%     \legend{Fonte: Elaborada pelo autor.}
+%     \label{fig:rubocop}
+% \end{figure}
