@@ -1,22 +1,24 @@
 \chapter{Resultados e discussões}
 \label{chap:resultados}
 
-Essa seção abordará os resultados alcançados em relação aos objetivos que foram propostos na seção XXX e seção XXX.
-
 Com o resultado desse trabalho, a comunidade acadêmica passa a dispor e utilizar um sistema web que facilita o fluxo de mercância. A interface idealizada do sistema foi alcançada em sua maior parte, bem como a disponibilização do código fonte.
 
-O sistema proposto foi totalmente desenvolvido de acordo com seus diagramas e requisitos apresentados na seção XXX. Buscou-se fazer um sistema robusto em que \textit{queries} ao banco de dados fossem pouco custosas para que o servidor não ficasse sobrecarregado devido as consultadas simultâneas dos usuários.
+O sistema proposto foi totalmente desenvolvido de acordo com seus diagramas e requisitos apresentados na seção \ref{chap:etapas_desenvolvimento}. Buscou-se fazer um sistema bonito, intuitivo e robusto para que \textit{queries} ao banco de dados fossem pouco custosas para que o servidor não ficasse sobrecarregado devido as consultadas simultâneas dos usuários.
 
-Já disponibilizado para uso, o sistema foi calorosamente acolhido pelas pessoas que compõem o âmbito universitário. O link de acesso para o projeto é \url{http://www.mercadouniversitario.com}, onde será possível realizar o cadastro público para ter acesso aos produtos comercializados, bem como realizar outro cadastro para adquirir uma conta de vendedor, para assim divulgar algum produto ao qual deseja-se vender.
+Divulgado para o público no dia 13 de janeiro de 2020 por meio de redes sociais, o sistema foi calorosamente acolhido pelas pessoas que compõem o âmbito universitário. O link de acesso para o projeto é \url{http://www.mercadouniversitario.com}, onde será possível realizar o cadastro público para ter acesso aos produtos comercializados, bem como criar uma conta de vendedor para assim divulgar algum produto ao qual deseja-se vender ou comprar.
 
-A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resultado alcançado e o mockup proposto para que seja feita uma melhor análise. As figuras A corresponderão as telas de mockup propostas antes do início do desenvolvimento, já as figuras B serão as mesmas telas alcançadas como resultado.
+\section{Comparação entre mockup e resultado obtido}
+
+A telas do sistema serão aqui apresentadas fazendo um comparativo entre o mockup proposto e o resultado alcançado para que seja feita uma melhor análise. As figuras A corresponderão as telas de mockup, já as figuras B serão as mesmas telas alcançadas como resultado. A maior diferença entre o mockup e o resultado gerado foi a escolha da cor principal do sistema, inicialmente foi pensado em um tom roxo, porém, posteriormente foi preferível alterar a cor para um tom de vermelho devido a pesquisas na área de psicologia das cores definir essa cor como estimulante para o consumo de alimentos(espera-se que a maioria dos produtos cadastrados será do gênero alimentício).
+
+As figuras \ref{fig:mockup_login} e \ref{fig:real_login} fazem um comparativo entre a tela de login da aplicação, praticamente não houve mudanças. As figuras \ref{fig:mockup_produtos} e \ref{fig:real_produtos} referenciam a seção de listagem de produtos do sistema, a diferença entre ambos foi básica, foi alterado apenas o botão de busca e campo da palavra-chave para pesquisa. O acesso a um produto foi especificado nas figuras \ref{fig:mockup_produto} e \ref{fig:real_produto}, o campo para definir a quantidade da compra não foi alcançado em relação ao proposto. Observando as figuras \ref{fig:mockup_vendedor} e \ref{fig:real_vendedor} referentes a página do vendedor nota-se a inclusão de duas informações que não foram contempladas no mockup, informações essas que só foram observadas como necessidade do sistema no ato do seu desenvolvimento. A página de pedidos teve poucas alterações como pode ser observado pelas figuras \ref{fig:mockup_pedidos} e \ref{fig:real_pedidos}, foi incluído um botão para cancelar o pedido.
 
 \begin{figure}[htbp!]
   \centering
   \caption{(A) Tela de login proposta}
   \includegraphics[width=1\textwidth]{figs/mockup/login.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:mockup_login}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -24,7 +26,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(B) Tela de login obtida como resultado}
   \includegraphics[width=1\textwidth]{figs/resultado/login.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:real_login}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -32,7 +34,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(A) Tela de produtos proposta}
   \includegraphics[width=1\textwidth]{figs/mockup/produtos.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:mockup_produtos}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -40,7 +42,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(B) Tela de produtos obtida como resultado}
   \includegraphics[width=1\textwidth]{figs/resultado/produtos.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:real_produtos}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -48,7 +50,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(A) Tela individual de produto proposta}
   \includegraphics[width=1\textwidth]{figs/mockup/produto.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:mockup_produto}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -56,7 +58,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(B) Tela individual de produto obtida como resultado}
   \includegraphics[width=1\textwidth]{figs/resultado/produto.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:real_produto}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -64,7 +66,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(A) Tela individual do vendedor proposta}
   \includegraphics[width=1\textwidth]{figs/mockup/vendedor.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:mockup_vendedor}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -72,7 +74,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(B) Tela individual do vendedor obtida como resultado}
   \includegraphics[width=1\textwidth]{figs/resultado/vendedor.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:real_vendedor}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -80,7 +82,7 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(A) Tela de pedidos proposta}
   \includegraphics[width=1\textwidth]{figs/mockup/carrinho.jpg}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:mockup_pedidos}
 \end{figure}
 
 \begin{figure}[htbp!]
@@ -88,8 +90,12 @@ A telas do sistema serão aqui apresentadas fazendo um comparativo entre o resul
   \caption{(B) Tela de pedidos obtida como resultado}
   \includegraphics[width=1\textwidth]{figs/resultado/carrinho.png}
     \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
+    \label{fig:real_pedidos}
 \end{figure}
+
+\section{Validação do sistema}
+
+Como citado na seção \ref{section:tdd}, foi utilizado a metodologia TDD para desenvolvimento do projeto, dessa forma foi possível validar o sistema implementado por meio de testes automatizados. A assertividade desses testes serão demonstrados aqui nessa seção por meio de gráficos para facilitar a interpretação dos dados. 
 
 % \begin{figure}[htbp!]
 % \centering
