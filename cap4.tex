@@ -95,50 +95,41 @@ As figuras \ref{fig:mockup_login} e \ref{fig:real_login} fazem um comparativo en
 
 \section{Validação do sistema}
 
-Como citado na seção \ref{section:tdd}, foi utilizado a metodologia TDD para desenvolvimento do projeto, dessa forma foi possível validar o sistema implementado por meio de testes automatizados. A assertividade desses testes serão demonstrados aqui nessa seção por meio de gráficos para facilitar a interpretação dos dados. 
+Como citado na seção \ref{section:tdd}, foi utilizado a metodologia TDD para desenvolvimento do projeto, dessa forma foi possível validar o sistema implementado por meio de testes automatizados. A assertividade desses testes serão demonstrados aqui nesta seção e poderá ser confirmada por qualquer pessoa que deseja, pois o código fonte de toda aplicação está disponível no Github por meio do link \url{https://github.com/tarv7/mercado-universitario}.
 
-% \begin{figure}[htbp!]
-% \centering
-% \caption{Comparativo entre tela de login proposta e final}
-% \subfloat[ADICIONAR UMA ILUSTRAÇÃO DA FORMA DE CAPTURA]{\includegraphics[width=0.48\textwidth]{figs/mockup/login.jpg}\label{fig:ilustracao_forma_aquisicao_imagem}}
-% \hfill
-% \subfloat[Imagem obtida com a utilização da câmera e flash forçado]{\includegraphics[width=0.48\textwidth]{figs/resultado/login.png}\label{fig:imagem_adquirida_camera}}
-% \legend{Fonte: Elaborada pelo autor}
-% \end{figure}
+Foi avaliado de forma sistemática toda a implementação técnica desenvolvida até o momento, buscando-se uma melhor eficiência e qualidade do código da aplicação. Serão realizados quatro tipos de testes automatizados no Mercado Universitário. Testes unitários e integração, testes de segurança e testes de qualidade do código, tais testes serão apresentados a seguir.
 
-% \section{Testes automatizados}\label{tdd}
-% Esta seção avalia de forma sistemática toda a implementação técnica desenvolvida até o momento, busca uma melhor eficiência e qualidade do código da aplicação. Serão realizados quatro tipos de testes automatizados no Mercado Universitário. Testes unitários e integração, testes de segurança e testes de qualidade do código, tais testes serão apresentados a seguir.
-% \subsection{Testes unitários e integração}
-% Foi utilizada a gem RSpec para esse tipo de teste. Tal ferramenta foi apresentada na seção \ref{rspec}. De acordo com a imagem \ref{fig:rspec} foram realizados 102 exemplos de testes na aplicação, tais testes conseguiram cobrir 92.9\% de todo o código da aplicação sem que ocorresse nenhuma falha. Tal resultado se mostra bastante satisfatório, uma vez que se aproxima bastante de 100\% de cobertura do código e não apresenta nenhuma falha.
-% \begin{figure}[htbp!]
-%   \centering
-%   \caption{Saída do terminal para teste automatizado unitário e de integração utilizando a \textit{gem} RSpec}
-%   \includegraphics[width=1\textwidth]{figs/rspec.png}
-%     \legend{Fonte: Elaborada pelo autor.}
-%     \label{fig:rspec}
-% \end{figure}
-% \subsection{Testes de segurança}
-% Foram utilizadas duas \textit{gems} para realizar esse teste de grande importância para a aplicação. A \textit{gem} Brakeman em conjunto com a \textit{gem} Bundle Audit são suficientes para explorar as principais vulnerabilidades das aplicações web. Como é observado nas imagens \ref{fig:brakeman} e \ref{fig:audit}, não foram encontradas nenhuma vulnerabilidade na aplicação.
-% \begin{figure}[htbp!]
-%   \centering
-%   \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Brakeman}
-%   \includegraphics[width=1\textwidth]{figs/brakeman.png}
-%     \legend{Fonte: Elaborada pelo autor.}
-%     \label{fig:brakeman}
-% \end{figure}
-% \begin{figure}[htbp!]
-%   \centering
-%   \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Bundle Audit}
-%   \includegraphics[width=1\textwidth]{figs/bundle_audit.png}
-%     \legend{Fonte: Elaborada pelo autor.}
-%     \label{fig:audit}
-% \end{figure}
-% \subsection{Testes de qualidade do código}
-% Para ser possível garantir uma boa manutenção e legibilidade futura do código, foi necessário utilizar a \textit{gem} Rubocop(apresentada na seção \ref{rubocop}). Como observado na imagem \ref{fig:rubocop}, foram verificadas as boas práticas de programação determinadas pelo Rails em 71 arquivos do projeto, não foi encontrada nenhuma ofensa no código.
-% \begin{figure}[htbp!]
-%   \centering
-%   \caption{Saída do terminal para verificação da qualidade do código utilizando a gem Rubocop}
-%   \includegraphics[width=1\textwidth]{figs/rubocop.png}
-%     \legend{Fonte: Elaborada pelo autor.}
-%     \label{fig:rubocop}
-% \end{figure}
+\subsection{Testes unitários e integração}
+Foi utilizada a gem RSpec para esse tipo de teste. Tal ferramenta foi apresentada na seção \ref{rspec}. De acordo com a figura \ref{fig:rspec} foram realizados 102 exemplos de testes na aplicação, tais testes conseguiram cobrir 92.9\% de todo o código da   aplicação sem que ocorresse nenhuma falha. Tal resultado se mostra bastante satisfatório, uma vez que se aproxima bastante de 100\% de cobertura do código e não apresenta nenhuma falha.
+\begin{figure}[htbp!]
+  \centering
+  \caption{Saída do terminal para teste automatizado unitário e de integração utilizando a \textit{gem} RSpec}
+  \includegraphics[width=1\textwidth]{figs/rspec.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:rspec}
+\end{figure}
+\subsection{Testes de segurança}
+Foram utilizadas duas \textit{gems} para realizar esse teste de grande importância para a aplicação. A \textit{gem} Brakeman em conjunto com a \textit{gem} Bundle Audit são suficientes para explorar as principais vulnerabilidades das aplicações web. Como é observado nas imagens \ref{fig:brakeman} e \ref{fig:audit}, não foram encontradas nenhuma vulnerabilidade na aplicação.
+\begin{figure}[htbp!]
+  \centering
+  \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Brakeman}
+  \includegraphics[width=1\textwidth]{figs/brakeman.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:brakeman}
+\end{figure}
+\begin{figure}[htbp!]
+  \centering
+  \caption{Saída do terminal para teste automatizado de segurança utilizando a \textit{gem} Bundle Audit}
+  \includegraphics[width=1\textwidth]{figs/bundle_audit.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:audit}
+\end{figure}
+\subsection{Testes de qualidade do código}
+Para ser possível garantir uma boa manutenção e legibilidade futura do código, foi necessário utilizar a \textit{gem} Rubocop(apresentada na seção \ref{rubocop}). Como observado na figura \ref{fig:rubocop}, foram verificadas as boas práticas de programação determinadas pelo Rails em 71 arquivos do projeto, não foi encontrada nenhuma ofensa no código.
+\begin{figure}[htbp!]
+  \centering
+  \caption{Saída do terminal para verificação da qualidade do código utilizando a gem Rubocop}
+  \includegraphics[width=1\textwidth]{figs/rubocop.png}
+    \legend{Fonte: Elaborada pelo autor.}
+    \label{fig:rubocop}
+\end{figure}
