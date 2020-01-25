@@ -1,12 +1,12 @@
 \chapter{Referencial Teórico}
 
-Essa seção tem como objetivo explicar o funcionamento de um sistema web, conhecimento necessário pois é a base de todo o projeto que aqui será demonstrado. Outros temas importantes serão abordados, como metodologia de desenvolvimento de software e padrões de código. \par
+Essa seção tem como objetivo criar uma base sólida e teórica em relação aos assuntos abordados nesse projeto, conhecimento necessário pois é a base de todo o projeto que aqui será demonstrado. Temas importantes serão abordados, como funcionamento de um sistema web, metodologia de desenvolvimento de software e padrões de código. \par
 Os tópicos aqui abordados servirão para nortear a metodologia proposta neste trabalho, buscando assim criar uma base sólida para os argumentos que serão apresentados. Alguns trabalhos semelhantes serão apresentados com a intenção de ajudar a contextualizar esse projeto aqui desenvolvido.
 
 
 \section{Trabalho informal}\label{trabalho_informal}
 Não foram encontrados artigos acerca do trabalho informal dentro das universidades, mas iremos usar como base uma pesquisa sobre o trabalho informal de jovens estudantes. Dois motivos para a inserção dos estudantes no mercado de trabalho informal é ajudar na renda familiar e obter independência financeira\cite{ferreira2009trabalhojovem}. \par
-De acordo com questionário fechado e entrevistas feitas por \cite{ribeiro2005evasao}, os motivos da evasão geralmente são causados por dificuldades financeiras, vocacionais, educacionais e de dedicação. Dentre as dificuldades citadas, uma se destacou por ser o principal motivo de evasão dos estudantes entrevistado, a dificuldade financeira. Diante disso, o projeto irá atuar consistentemente em um dos motivos de evasão universitária, a dificuldade financeira, buscando assim um meio de sanar tal problema.
+De acordo com questionário fechado e entrevistas feitas por \cite{ribeiro2005evasao}, os motivos da evasão geralmente são causados por dificuldades financeiras, vocacionais, educacionais e de dedicação. Dentre as dificuldades citadas, uma se destacou por ser o principal motivo de evasão dos estudantes entrevistado, a dificuldade financeira. Diante disso, o projeto irá atuar consistentemente em um dos motivos de evasão universitária, a dificuldade financeira, buscando assim sanar tal problema por meio de uma aplicação web.
 
 \section{Aplicações web}
 \label{sec:trabalhos_correlatos}
@@ -24,7 +24,7 @@ O funcionamento de um sistema de tecnologia web é fácil de ser entendido. Em u
 \end{figure}
 
 Uma aplicação web é um sistema projetado para ser executado em um navegador, essa é sua principal vantagem, visto que não será necessário alguns pré-requisitos como o uso de um sistema operacional em específico, por exemplo. Essa característica multiplataforma é ótima em relação a mobilidade e flexibilidade, pois em qualquer lugar/dispositivo que contém um navegador será possível acessar a aplicação. Além disso, as tecnologias para desenvolvimento web evoluíram muito, atualmente é possível fazer layouts que se adéquam fielmente aos \textit{smartphones}, buscando assim uma melhor experiência para o usuário\cite{pandey2013responsive}. \par
-O sistema aqui proposto se encaixa muito bem em um modelo web, devido aos seus atores da aplicação necessitarem de portabilidade da aplicação, pois os mesmo se encontram em uma rotina corriqueira, devido ao deslocamento entre sua casa, estágio, universidade e afazeres em geral.
+O sistema aqui proposto se encaixa muito bem em um modelo web, devido aos seus atores da aplicação necessitarem de portabilidade da aplicação, pois os mesmo se encontram em uma rotina corriqueira, devido ao deslocamento entre sua casa, estágio, universidade e afazeres em geral. Para que seja possível criar uma plataforma web, será necessário escolhe uma linguagem de programação entre as diversas disponíveis para isso.
 
 %\subsection{Guia do beneficiamento do cacau de qualidade}
 %O guia \cite{guia_beneficiamento_cacau_2013}, fala da importância do beneficiamento das sementes de cacau e o passo a passo, com dicas e técnicas, para que o cacau seja produzido com elevado padrão de qualidade. 
@@ -71,7 +71,7 @@ O sistema aqui proposto se encaixa muito bem em um modelo web, devido aos seus a
 
 \section{Linguagem Ruby}
 Desenvolvida em 1995 por Yukihiro Matsumoto, Ruby é uma linguagem interpretada que inicialmente tinha objetivos muito semelhantes a linguagem Python\cite{purer2009phpvspythonvsruby}. Dinâmico e de código fonte aberto, a linguagem tem foco na simplicidade e produtividade, possui uma sintaxe elegante, natural e fácil de ler e escrever \cite{siteruby}. \par
-Ruby segue o princípio de pouca surpresa, isso significa que a linguagem foi construída para ser intuitiva e com comportamentos esperados para o programador\cite{purer2009phpvspythonvsruby}. Diante disso, a curva de aprendizado da linguagem se torna muito baixa, encorajando assim outras pessoas a contribuir com o projeto desenvolvido aqui.
+Ruby segue o princípio de pouca surpresa, isso significa que a linguagem foi construída para ser intuitiva e com comportamentos esperados para o programador\cite{purer2009phpvspythonvsruby}. Diante disso, a curva de aprendizado da linguagem se torna muito baixa, encorajando assim outras pessoas a contribuir com o projeto desenvolvido aqui. A linguagem Ruby dispõe de alguns \textit{frameworks} para facilitar seu desenvolvimento.
 
 %\subsection{RGB}
 %Amplamente conhecido, é um modelo de cor aditiva onde as cores vermelho, verde e azul são combinadas em diferentes intensidades produzindo outras cores. O RGB (vermelho, verde e azul) são chamadas de cores primárias.
@@ -209,7 +209,7 @@ Tabela \ref{tab:sqlvsnosql} – Tabela de comparação entre banco de dados rela
 \hline
 Confidencialidade & A confidencialidade dos dados geralmente é alcançada no banco de dados relacional porque foi usada técnicas de criptografia para armazenar dados criptografados. & A confidencialidade dos dados não é alcançada, porque geralmente os dados são armazenados de forma clara. \\
 \hline
-Auditoria & Fornecer mecanismos auditar que permita escrever para o arquivos syslog ou xml do banco de dados, e alguns dar uma auditoria mais avançada. & A maioria do NoSQL bancos de dados não fornecer auditoria. Existem alguns bancos de dados que fornecem auditoria com questões como Couchdb que loja o nome de usuário e senha no log arquivo que é claro compromete a segurança. \\
+Auditoria & Fornecer mecanismos auditar que permita escrever para o arquivos syslog ou xml do banco de dados, e alguns dar uma auditoria mais avançada. & A maioria do NoSQL bancos de dados não fornecer auditoria. Existem alguns bancos de dados que fornecem auditoria como Couchdb que guarda o nome de usuário e senha no log arquivo que é claro compromete a segurança. \\
 \hline
 Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo seguro de comunicação com o cliente usando protocolos de criptografia e \textit{Secure Sockets Layer}(SSL). & A maioria dos bancos de dados NoSQL não oferecem mecanismos de comunicação segura com o cliente. \\
 \hline
@@ -242,8 +242,8 @@ Engenharia de software é uma área da computação voltada à especificação, 
 \subsection{Padrão de Projeto MVC (Model View Controller)}
 \label{subsec:thresholding}
 
-O padrão \textit{model-view-controller}(MVC) é um padrão de projeto(do inglês \textit{design pattern}) de apresentação/abstração/controle utilizado para arquitetar sistemas de softwares \cite{leff2001webmvc}. No paradigma MVC separa a aplicação em três tipos de objetos, cada um especializado em sua tarefa, são elas: Modelo(\textit{Model}), Visão(\textit{View}) e Controlador(\textit{Controller}). \par
-O \textit{Model} gerencia e valida o comportamento dos dados da aplicação, conversando com o banco de dados, por exemplo. A \textit{View} é a parte gráfica da aplicação ao qual irá interagir visualmente com o usuário. O \textit{Controller} interpreta, ordena e responde a requisições feitas pelos usuários.\cite{burbeck1997applications} A figura \ref{fig:mvc} exemplifica muito bem a abordagem do MVC. \par
+O padrão \textit{model-view-controller}(MVC) é um padrão de projeto(do inglês \textit{design pattern}) de apresentação/abstração/controle utilizado para arquitetar sistemas de softwares \cite{leff2001webmvc}. O paradigma MVC separa a aplicação em três tipos de objetos, cada um especializado em sua tarefa, são elas: Modelo(\textit{Model}), Visão(\textit{View}) e Controlador(\textit{Controller}). \par
+O \textit{Model} gerencia e valida o comportamento dos dados da aplicação, conversando com o banco de dados, por exemplo. A \textit{View} é a parte gráfica da aplicação ao qual irá interagir visualmente com o usuário. O \textit{Controller} interpreta, ordena e responde a requisições feitas pelos usuários\cite{burbeck1997applications}. A figura \ref{fig:mvc} exemplifica muito bem a abordagem do MVC. \par
 
 \begin{figure}[htbp!]
   \centering
@@ -274,8 +274,8 @@ OSS(\textit{Open Source Software}) é um termo usado para designar um software d
 
 Algumas vantagens de projetar um OSS são:
 \begin{itemize}  
-\item oferta gratuita de código aumentará a participação de mercado\cite{fitzgerald2006transformation}
-\item construir uma base de desenvolvimento em torno da ferramenta aumentar a sustentabilidade a longo prazo\cite{nyman2011forking}
+\item Oferta gratuita de código aumentará a participação de mercado\cite{fitzgerald2006transformation}
+\item Construir uma base de desenvolvimento em torno da ferramenta aumentar a sustentabilidade a longo prazo\cite{nyman2011forking}
 \item O conjunto crescente de partes interessadas resulta em melhorias adicionais sucessivas no software\cite{heron2013open}
 \item Replicação dos resultados obtidos neste projeto
 \end{itemize}
