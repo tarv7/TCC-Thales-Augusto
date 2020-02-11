@@ -1,17 +1,17 @@
 \chapter{Desenvolvimento do sistema}
 \label{chap:etapas_desenvolvimento}
 
-Nesta seção iremos apresentar detalhadamente os passos e ferramentas necessárias para elaboração da aplicação web Mercado Universitário. A medida que for sendo detalhado cada passo seguido, será apresentada sua finalidade e o motivo do uso das ferramentas ali utilizadas para produção do mesmo. \par
+Nesta seção iremos apresentar detalhadamente os passos e ferramentas necessárias para elaboração da aplicação web chamado Mercado Universitário. A medida que for sendo detalhado cada passo seguido, será apresentada sua finalidade e o motivo do uso das ferramentas ali utilizadas para produção do mesmo. \par
 Intencionalmente as seções estão organizadas de forma cronológica a linha de desenvolvimento da aplicação, dessa forma fica mais fácil o entendimento e execução futura dos passos necessários para validar o atual projeto por terceiros. Foi buscado não só organizar as subseções desta seção, bem como seguir uma metodologia ágil de desenvolvimento para construção do sistema web, como será apresentado na próxima subseção.
 
-\section{Método ágil de desenvolvimento}
+\section{Metodologia de desenvolvimento}
 \label{section:tdd}
 
-Desenvolvimento Guiado a Testes(TDD - do inglês Test Driven Development) foi a metodologia ágil de desenvolvimento para produção dessa aplicação devido a vários fatores, como:
+Desenvolvimento Guiado a Testes(TDD - do inglês Test Driven Development) é uma técnica de desenvolvimento de software que realiza testes automatizados para garantir que a aplicação faça o que deveria fazer. O TDD foi escolhido para ser implementado no desenvolvimento dessa aplicação devido a vários fatores, como:
 \begin{itemize}  
-\item Necessidade de \textit{feedbacks} rápidos sobre as funcionalidades implementadas sistema
-\item Como o código será aberto, fica mais fácil a verificação de códigos bons e sem \textit{bugs} feitos por terceiros
-\item A produtividade aumenta bastante, devido a ser fácil a detecção de \textit{bugs} por meio dos testes do TDD
+\item Necessidade de \textit{feedbacks} rápidos sobre as funcionalidades implementadas sistema;
+\item Como o código será aberto, fica mais fácil a verificação de códigos bons e sem \textit{bugs} feitos por terceiros;
+\item A produtividade aumenta bastante, devido a ser fácil a detecção de \textit{bugs} por meio dos testes do TDD;
 \item Como será um projeto que estará constantemente sendo atualizado, fica-se mais fácil a implementação de novas funcionalidades e \textit{refactoring} observando se tal mudança afeta outras partes do sistema.
 \end{itemize}
 
@@ -25,35 +25,6 @@ Rubocop é uma \textit{gem} de código fonte aberto disponível no Github\footno
 O Brakeman é uma \textit{gem} de código livre disponível no Github \footnote{Gem Brakeman \url{https://github.com/presidentbeef/brakeman}} que ajuda a descobrir várias vulnerabilidades de segurança do projeto. O brakeman roda de forma totalmente automatizada, buscando falhas como \textit{SQL Injection, File Access, Mass Assignment}, dentre outras. Então para ter uma aplicação segura e de qualidade é indispensável o uso dessa \textit{gem}.
 
 No projeto Mercado Universitário foi aplicado três tipos de testes automatizados fornecidos pelo TDD, os testes unitários, os testes de integração e testes de segurança da aplicação. Tais testes serão melhor detalhados na seção \ref{section:tdd}.
-
-\section{Atores do sistema}
-
-Para que seja possível definir melhor o escopo dos requisitos do sistema(que será apresentado na seção \ref{requisitos}), foi preciso identificar os atores que farão parte da aplicação. Dessa forma será possível determinar e entender de maneira correta as responsabilidades de cada tipo de usuário do sistema. \par
-Cada ator terá seu nível de acesso definido na aplicação, que será percebido na coluna “responsabilidade” que se encontra na tabela \ref{tab:atores}. Como pode ser percebido na tabela \ref{tab:atores}, os tipos de atores podem realizar tarefas distintas como também tarefas que têm um mesmo propósito. \par
-Em tal projeto, inicialmente, não será necessário a presença de um ator como administrador geral do sistema devido a se tratar de um projeto piloto em uma única universidade, sem a necessidade constante de adicionar novas universidades e cursos da mesma. Tal ponto será apresentado e discutido melhor na seção de trabalhos futuros que se encontra na seção \ref{chap:conclusoes_trabalhos_futuros}.
-
-\begin{table}[ht]
-\centering
-\caption{Tabela de atores do sistema}
-\label{tab:atores}
-\resizebox{\textwidth}{!}{%
-\begin{tabularx}{0.9\textwidth} { 
-  | >{\raggedright\arraybackslash}X 
-  | >{\raggedright\arraybackslash}X 
-  | >{\raggedright\arraybackslash}X 
-  | >{\raggedright\arraybackslash}X | }
- \hline
- Ator & Descrição & Responsabilidade & Acesso a área restrita? \\
- \hline
- Convidado  & Qualquer pessoa do âmbito universitário que deseja comprar ou vender produtos  & Cadastrar-se como novo usuário do sistema & Não  \\
-\hline
-Cliente & Discentes, funcionários, ou moradores da região próxima a universidade & Visualizar categorias, produtos, vendedores, \textit{reviews} e seus próprios pedidos; Cadastrar novos pedidos e \textit{reviews}; Atualizar seus próprios \textit{reviews} e dados cadastrais & Não \\
-\hline
-Vendedor & Discentes, funcionários, ou moradores da região próxima a universidade que obtém renda a partir do comércio informal & Visualizar clientes, seus pedidos e seus \textit{reviews}; Cadastrar novos produtos; Atualizar seus produtos e dados cadastrais & Sim \\
-\hline
-\end{tabularx}%
-}
-\end{table}
 
 \section{Levantamento de requisitos}\label{requisitos}
 
@@ -173,7 +144,7 @@ Não será necessário abordar todos os requisitos funcionais nesta seção, poi
 \end{enumerate}
 
 \subsection{Requisitos não funcionais}
-De acordo com \cite{sommerville2007engenharia}, os requisitos não funcionais são requisitos que não estão diretamente relacionados com serviços específicos oferecidos pelo sistema a seus usuários. Eles estão associados às características emergentes do sistema, como confiabilidade, tempo de resposta e ocupação de área. Na tabela 1 será apresentado os requisitos não funcionais atribuídos ao sistema.
+De acordo com \cite{sommerville2007engenharia}, os requisitos não funcionais são requisitos que não estão diretamente relacionados com serviços específicos oferecidos pelo sistema a seus usuários. Eles estão associados às características emergentes do sistema, como confiabilidade, tempo de resposta e ocupação de área. Na Tabela 1 será apresentado os requisitos não funcionais atribuídos ao sistema.
 
 \begin{table}[ht]
 \centering
@@ -227,6 +198,35 @@ Tabela \ref{tab:naofuncionais} – Tabela de requisitos não funcionais do siste
 }
 \end{table}
 
+\section{Atores do sistema}
+
+Para que seja possível definir melhor o escopo dos requisitos do sistema(que será apresentado na seção \ref{requisitos}), foi preciso identificar os atores que farão parte da aplicação. Dessa forma será possível determinar e entender de maneira correta as responsabilidades de cada tipo de usuário do sistema. \par
+Cada ator terá seu nível de acesso definido na aplicação, que será percebido na coluna “responsabilidade” que se encontra na Tabela \ref{tab:atores}. Como pode ser percebido na Tabela \ref{tab:atores}, os tipos de atores podem realizar tarefas distintas como também tarefas que têm um mesmo propósito. \par
+Em tal projeto, inicialmente, não será necessário a presença de um ator como administrador geral do sistema devido a se tratar de um projeto, inicialmente, com escopo para uma única universidade, sem a necessidade constante de adicionar novas universidades e cursos da mesma. Tal ponto será apresentado e discutido melhor na seção de trabalhos futuros que se encontra na seção \ref{chap:conclusoes_trabalhos_futuros}.
+
+\begin{table}[ht]
+\centering
+\caption{Tabela de atores do sistema}
+\label{tab:atores}
+\resizebox{\textwidth}{!}{%
+\begin{tabularx}{0.9\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X | }
+ \hline
+ Ator & Descrição & Responsabilidade & Acesso a área restrita? \\
+ \hline
+ Convidado  & Qualquer pessoa do âmbito universitário que deseja comprar ou vender produtos  & Cadastrar-se como novo usuário do sistema & Não  \\
+\hline
+Cliente & Discentes, funcionários, ou moradores da região próxima a universidade & Visualizar categorias, produtos, vendedores, \textit{reviews} e seus próprios pedidos; Cadastrar novos pedidos e \textit{reviews}; Atualizar seus próprios \textit{reviews} e dados cadastrais & Não \\
+\hline
+Vendedor & Discentes, funcionários, ou moradores da região próxima a universidade que obtém renda a partir do comércio informal & Visualizar clientes, seus pedidos e seus \textit{reviews}; Cadastrar novos produtos; Atualizar seus produtos e dados cadastrais & Sim \\
+\hline
+\end{tabularx}%
+}
+\end{table}
+
 
 %  \hline
 %  RNF07 & A aplicação deve possuir segurança em operações por nível de usuário. & Segurança  \\
@@ -234,20 +234,8 @@ Tabela \ref{tab:naofuncionais} – Tabela de requisitos não funcionais do siste
 \section{Engenharia de software}
 Nesta subseção será apresentado vários diagramas baseados em engenharia de software para ajudar a entender, agilizar e organizar o escopo da aplicação a ser desenvolvida.
 
-\subsection{Modelo de entidade e relacionamento}
-Para criar um sistema bem estruturado, é de suma importância que seja feito o diagrama de entidade e relacionamento do banco de dados da aplicação. Nele estará disposto todas as tabelas da aplicação, facilitando assim o desenvolvimento do sistema, isso traz consigo grande produtividade, uma vez que não será necessário grandes mudanças na estrutura a cada passo de elaboração da aplicação.
-
-A figura \ref{fig:err}, expõe o modelo de entidade e relacionamento atual do sistema, modelo esse que passou por diversas mudanças básicas ao decorrer do desenvolvimento, como inserção e exclusão de atributos das tabelas. Essas alterações no banco são facilitadas por meio das \textit{migrations}, que são técnicas e ferramentas que auxiliam o versionamento do banco de dados durante o desenvolvimento da aplicação.
-
-\begin{figure}[htbp!]
-  \centering
-  \caption{Diagrama de entidade e relacionamento do banco de dados}
-  \includegraphics[width=1\textwidth]{figs/err.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:err}
-\end{figure}
-
 \subsection{Telas de \textit{mockup}}\label{mockup}
+
 Foi necessário prototipar a aplicação antes do desenvolvimento, pois com essa abordagem ficou mais fácil e objetivo o desenvolvimento do sistema. Para confecção de cada tela de \textit{mockup}, foi-se utilizada a ferramenta Figma\footnote{Figma \url{https://figma.com}}.
 
 O Figma é uma ferramenta de design de interface. Um dos motivos para usar essa ferramenta no projeto foi devido a mesma possuir uma portabilidade muito boa, visto que roda diretamente no navegador, ou seja, é compatível com Windows, Linux e Mac. É multitarefas, ou seja, uma equipe pode explorar o mesmo projeto juntas e ver as alterações em tempo real.
@@ -255,7 +243,7 @@ O Figma é uma ferramenta de design de interface. Um dos motivos para usar essa 
 A elaboração dessa etapa foi de suma importância para o resultado final do projeto. Então, para um melhor aproveitamento do dados produzidos, na seção \ref{chap:resultados} será realizada uma comparação entre as telas de \textit{mockup} e o resultado final da aplicação.
 
 \subsection{Diagrama de casos de uso}
-O diagrama de casos de uso é de grande importância para um entendimento geral do sistema, apresentando as principais ações que cada usuário pode fazer. Esse diagrama é apresentado na figura \ref{fig:use}. O cliente pode realizar basicamente três ações. Já pelo vendedor é capaz de realizar outras duas ações além das permitidas quando o mesmo se encontra no papel de cliente do sistema. Em todos os casos é necessário que seja realizado o login na aplicação.
+O diagrama de casos de uso é de grande importância para um entendimento geral do sistema, apresentando as principais ações que cada usuário pode fazer. Esse diagrama é apresentado na Figura \ref{fig:use}. O cliente pode realizar basicamente três ações. Já pelo vendedor é capaz de realizar outras duas ações além das permitidas quando o mesmo se encontra no papel de cliente do sistema. Em todos os casos é necessário que seja realizado o login na aplicação.
 \begin{figure}[htbp!]
   \centering
   \caption{Diagrama de caso de uso}
@@ -266,31 +254,11 @@ O diagrama de casos de uso é de grande importância para um entendimento geral 
 
 
 \subsection{Diagrama de sequência}
-Por meio dos diagramas de sequência será possível ter uma boa visão em relação a cada passo para concluir determinada ação. Nessa seção será apresentado alguns diagramas de sequência que cobrem a todas as funcionalidades do sistema.
-
-\subsubsection{Cadastrar um produto}
-Para cadastrar um produto no sistema, será necessário que o usuário tenha perfil tanto de cliente como de vendedor e esteja logado no sistema. Com isso, será possível acessar a área restrita do sistema e solicitar um novo cadastro de produto, inserido cada campo e submetendo para que o registro seja efetuado no banco de dados. Tal diagrama pode ser observado na figura \ref{fig:sequence1}.
-\begin{figure}[htbp!]
-  \centering
-  \caption{Cadastrar um produto}
-  \includegraphics[width=1\textwidth]{figs/sequence1.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:sequence1}
-\end{figure}
-
-\subsubsection{Atribuir um review}
-A atribuição de um \textit{review} é uma ação simples, ao qual será necessário que o usuário acesse a página individual do vendedor e clique no link ser redirecionado para a página de inserção do \textit{review}, bastando definir a nota e comentário e submeter ao sistema. Tal diagrama pode ser observado na figura \ref{fig:sequence2}.
-\begin{figure}[htbp!]
-  \centering
-  \caption{Atribuir um review}
-  \includegraphics[width=1\textwidth]{figs/sequence2.png}
-    \legend{Fonte: Elaborada pelo autor.}
-    \label{fig:sequence2}
-\end{figure}
+Por meio dos diagramas de sequência é possível ter uma boa visão em relação a cada passo para concluir determinada ação. Nessa seção será apresentado o diagrama de sequência da principal funcionalidade do sistema.
 
 \subsubsection{Realizar um pedido}
 % escrever aqui
-A ação de realizar um pedido é a principal do sistema, ao qual será realizada por um cliente. Será necessário que o cliente insira no carrinho de compras todos os produtos que deseja comprar. Após inserir todos os produtos desejados, deverá acessar a página "meus pedidos" e fechar o pedido para que o mesmo seja processado pelo seu vendedor. Tal diagrama pode ser observado na figura \ref{fig:sequence3}.
+A ação de realizar um pedido é a principal do sistema, ao qual será realizada por um cliente. Será necessário que o cliente insira no carrinho de compras todos os produtos que deseja comprar. Após inserir todos os produtos desejados, deverá acessar a página "meus pedidos" e fechar o pedido para que o mesmo seja processado pelo seu vendedor. Tal diagrama pode ser observado na Figura \ref{fig:sequence3}.
 \begin{figure}[htbp!]
   \centering
   \caption{Realizar um pedido}
@@ -300,7 +268,7 @@ A ação de realizar um pedido é a principal do sistema, ao qual será realizad
 \end{figure}
 
 \subsection{Diagrama de classes}
-A figura \ref{fig:class} representa o diagrama de classes concebido para a aplicação. Todas as classes da aplicação serão derivadas da classe ApplicationRecord do \textit{framework} RoR, omitida nesse diagrama por conter inúmeros atributos e métodos genéricos, ficando assim inviável para apresentação.
+A Figura \ref{fig:class} representa o diagrama de classes concebido para a aplicação. Todas as classes da aplicação serão derivadas da classe ApplicationRecord do \textit{framework} RoR, omitida nesse diagrama por conter inúmeros atributos e métodos genéricos, ficando assim inviável para apresentação.
 \begin{figure}[htbp!]
   \centering
   \caption{Diagrama de classes}
@@ -313,3 +281,11 @@ A figura \ref{fig:class} representa o diagrama de classes concebido para a aplic
 % O processo de desenvolvimento do sistema utilizou desde o início várias ferramentas auxiliares. Software para versionamento de código, bibliotecas da linguagem, ferramenta de \textit{mockup}(como citada na seção \ref{mockup}) são algumas delas. Tais ferramentas contribuíram agilizar e facilitar o desenvolvimento do projeto.
 % \subsection{Versionamento de código}
 O objetivo mais básico dos softwares de controle de versão é armazenar e gerenciar o histórico de alterações feitas em um arquivo, dessa forma será possível retornar a versões anteriores do código caso seja necessário. No projeto aqui desenvolvido foi utilizado o versionador Git. O Git pode se conectar com várias plataformas online, como por exemplo o Github, Gitlab e outros para que o código fonte seja disponibilizado para o público.
+
+
+\section{Dificuldades encontrados}
+\label{sec:dificuldades}
+
+Um sistema de \textit{e-commerce} deslumbra a elaboração de todas etapas para compra dos produtos, desde a procura de um produto até o pagamento do mesmo. Porém, não foi possível incluir a etapa de pagamento no Mercado Universitário devido ao curto período de tempo para a implementação, tempo esse necessário para garantir a confiabilidade e segurança dessa etapa que precisa ter uma maior garantia de segurança por manipular diretamente com o dinheiro dos usuários do sistema. De qualquer forma, tal funcionalidade não é primordial para o funcionamento do sistema, já que existem outras formas para pagamento fora da plataforma.
+
+Também devido ao curto período de tempo para elaboração desse projeto(cerca de 4 meses), não foi possível criar um sistema totalmente responsivo para dispositivos móveis com diferentes tamanhos de tela. Entretanto, a maioria dos dispositivos tem telas compatíveis com o sistema.

@@ -1,6 +1,6 @@
 \chapter{Referencial Teórico}
 
-Essa seção tem como objetivo criar uma base sólida e teórica em relação aos assuntos abordados nesse projeto, conhecimento necessário pois é a base de todo o projeto que aqui será demonstrado. Temas importantes serão abordados, como funcionamento de um sistema web, metodologia de desenvolvimento de software e padrões de código. \par
+Essa seção tem como objetivo apresentar de maneira teórica os assuntos abordados nesse projeto, conhecimento necessário pois é a base de todo o projeto que aqui será demonstrado. Temas importantes serão abordados, como funcionamento de um sistema web, metodologia de desenvolvimento de software e padrões de código. \par
 Os tópicos aqui abordados servirão para nortear a metodologia proposta neste trabalho, buscando assim criar uma base sólida para os argumentos que serão apresentados. Alguns trabalhos semelhantes serão apresentados com a intenção de ajudar a contextualizar esse projeto aqui desenvolvido.
 
 
@@ -8,12 +8,30 @@ Os tópicos aqui abordados servirão para nortear a metodologia proposta neste t
 Não foram encontrados artigos acerca do trabalho informal dentro das universidades, mas iremos usar como base uma pesquisa sobre o trabalho informal de jovens estudantes. Dois motivos para a inserção dos estudantes no mercado de trabalho informal é ajudar na renda familiar e obter independência financeira\cite{ferreira2009trabalhojovem}. \par
 De acordo com questionário fechado e entrevistas feitas por \cite{ribeiro2005evasao}, os motivos da evasão geralmente são causados por dificuldades financeiras, vocacionais, educacionais e de dedicação. Dentre as dificuldades citadas, uma se destacou por ser o principal motivo de evasão dos estudantes entrevistado, a dificuldade financeira. Diante disso, o projeto irá atuar consistentemente em um dos motivos de evasão universitária, a dificuldade financeira, buscando assim sanar tal problema por meio de uma aplicação web.
 
+
+\section{\textit{E-commerce}}\label{ecommerce}
+
+Segundo \cite{nanehkaran2013introduction}, um \textit{e-commerce} é um mercado eletrônico de poderoso conceito e processo que revolucionou a tecnologia da informação e comunicação no campo da economia. Uma vantagem do mercado virtual é não ter necessidade de alocar um espaço físico para o mesmo, sendo possível acessa-lo a qualquer momento, de qualquer lugar do mundo. Devido aos seus vários benefícios, esse tipo de mercado se popularizou rapidamente.
+
+A atuação do comércio eletrônico existe a cerca de 55 anos atrás, eram realizadas compras em terminais de pontos de vendas e consumidores podiam retirar dinheiro dos caixas eletrônicos\cite{wigand1997electronic}. Em 1994, quando a \textit{World Wide Web} foi introduzida de forma mais abrangente no cotidiano, tornou-se importante para a economia mundial por se tratar de um "negócio baseado na web", dessa forma esse novo mercado estava se expandindo a nível mundial\cite{nanehkaran2013introduction}.
+
+Existem várias classificações diferentes de \textit{e-commerce}. As principais são:
+\begin{itemize}  
+\item B2B(\textit{Business-to-Business}): em que as transações comerciais de produtos e serviços ofertados são entre empresas;
+\item B2C(\textit{Business-to-Consumer}): em que as empresasas fornecem serviços e produtos para o consumidor final;
+\item C2B(\textit{Consumer-to-Business}): em que os consumidores prestam serviços para empresas;
+\item C2C(\textit{Consumer-to-Consumer}): em que tais transações comerciais ocorrem entre consumidores.
+\end{itemize}
+
 \section{Aplicações web}
 \label{sec:trabalhos_correlatos}
 
 Na década de 1990 foi concebida uma nova tecnologia para a internet: a Tecnologia Web\cite{zaneti2005construcao}. O advento dessa nova tecnologia ocorreu devido a necessidade de formar um repositório de conhecimento humano \cite{lee1994www} e está baseada em troca de informações, visualização de documentos eletrônicos e mecanismos de armazenamento. \par
 Essa tecnologia foi criada para divulgar o conhecimento científico, porém atualmente é utilizada como meio para vários outros segmentos de informação\cite{zaneti2005construcao}. \par
-O funcionamento de um sistema de tecnologia web é fácil de ser entendido. Em um modelo cliente-servidor(do inglês \textit{client-server}), o navegador faz o papel do cliente, responsável assim por fazer requisições ao servidor. Por sua vez, o servidor é responsável por receber e tratar a requisição feita pelo cliente, logo após ele irá devolver uma resposta para o mesmo\cite{sousa2016desenvolvimento}. A figura \ref{fig:web} exemplifica muito bem essa comunicação.
+Em um modelo cliente-servidor(do inglês \textit{client-server}), o navegador faz o papel do cliente, responsável assim por fazer requisições ao servidor. Por sua vez, o servidor é responsável por receber e tratar a requisição feita pelo cliente, logo após ele irá devolver uma resposta para o mesmo\cite{sousa2016desenvolvimento}. A Figura \ref{fig:web} exemplifica muito bem essa comunicação.
+
+Uma aplicação web é um sistema projetado para ser executado em um navegador, essa é sua principal vantagem, visto que não será necessário alguns pré-requisitos como o uso de um sistema operacional em específico, por exemplo. Essa característica multiplataforma é ótima em relação a mobilidade e flexibilidade, pois em qualquer lugar/dispositivo que contém um navegador será possível acessar a aplicação. Além disso, as tecnologias para desenvolvimento web evoluíram muito, atualmente é possível fazer layouts que se adéquam aos \textit{smartphones}, buscando assim uma melhor experiência para o usuário\cite{pandey2013responsive}. \par
+O sistema aqui proposto se encaixa muito bem em um modelo web, devido aos seus atores da aplicação necessitarem de portabilidade da aplicação, pois os mesmo se encontram em uma rotina corriqueira, devido ao deslocamento entre sua casa, estágio, universidade e afazeres em geral. Para que seja possível criar uma plataforma web, será necessário escolhe uma linguagem de programação entre as diversas disponíveis para isso.
 
 \begin{figure}[htbp!]
   \centering
@@ -22,52 +40,6 @@ O funcionamento de um sistema de tecnologia web é fácil de ser entendido. Em u
     \legend{Fonte: https://commons.wikimedia.org/wiki/File:Client-server\_model.svg acessado dia 15 de dezembro de 2019 às 23:26}
     \label{fig:web}
 \end{figure}
-
-Uma aplicação web é um sistema projetado para ser executado em um navegador, essa é sua principal vantagem, visto que não será necessário alguns pré-requisitos como o uso de um sistema operacional em específico, por exemplo. Essa característica multiplataforma é ótima em relação a mobilidade e flexibilidade, pois em qualquer lugar/dispositivo que contém um navegador será possível acessar a aplicação. Além disso, as tecnologias para desenvolvimento web evoluíram muito, atualmente é possível fazer layouts que se adéquam fielmente aos \textit{smartphones}, buscando assim uma melhor experiência para o usuário\cite{pandey2013responsive}. \par
-O sistema aqui proposto se encaixa muito bem em um modelo web, devido aos seus atores da aplicação necessitarem de portabilidade da aplicação, pois os mesmo se encontram em uma rotina corriqueira, devido ao deslocamento entre sua casa, estágio, universidade e afazeres em geral. Para que seja possível criar uma plataforma web, será necessário escolhe uma linguagem de programação entre as diversas disponíveis para isso.
-
-%\subsection{Guia do beneficiamento do cacau de qualidade}
-%O guia \cite{guia_beneficiamento_cacau_2013}, fala da importância do beneficiamento das sementes de cacau e o passo a passo, com dicas e técnicas, para que o cacau seja produzido com elevado padrão de qualidade. 
-
-%Em uma das seções, fala-se sobre como realizar a prova de corte, indicando como deve ser a escolha das amêndoas, a quantidade de porções e o peso de cada porção para que a seleção seja da forma mais aleatória possível, e então fala sobre a disposição das amêndoas para a análise visual, além de recomendar a análise olfativa e do paladar. 
-
-%Possui algumas imagens indicando o passo a passo, as imagens de um exemplar de amêndoa de cada classe, e disponibiliza uma tabela de avaliação de qualidade, onde o produtor insere informações como a data da colheita, aroma, umidade e a classifica visualmente.
-
-%O guia possui dados que auxiliam também a identificar a classe dado a tolerância máxima de percentuais de defeitos para amêndoas de cacau comercial, segundo a Instrução Normativa nº 38/2008 (MAPA).
-
-%Guia do beneficiamento
-
-%\subsubsection{\textit{Cocoa Beans Industry Quality Requirements}}
-%A publicação \cite{cocoa_quality_requeriments_2016} é subdividido em três partes, onde a primeira fala sobre os aspectos de qualidade das sementes de cacau, a segunda que fala sobre os padrões de qualidade de cacau internacionais e outros padrões, e a terceira parte que aborda sobre como aspectos da produção do cacau afetam os requerimentos de qualidade.
-
-%Na seção da prova de corte, dita as regras que devem ser seguidas para que haja a comprovação da qualidade das amêndoas, que são citadas em tópicos anteriores. É dito sobre o que é a prova de corte, qual a finalidade, a quantidade de amostras que deve ser selecionada, e sobre o corte a ser feito em cada amêndoa. Sobre as categorias classificadas pela ISO, e sobre o uso de apenas uma parte delas.
-
-%Na mesma seção fala sobre outra forma de realizar o teste de qualidade, que é a contagem de sementes, onde é verificado a quantidade de sementes multiplicado por 100, e esse produto é dividido pela massa total dessas sementes selecionadas.
-
-%
-%\subsection{Cartilha de classificação CEPLAC}
-%A cartilha \cite{cartilha_ceplac} informa sobre os passos do correto beneficiamento do cacau, desde sua colheita, a disposição em bananeiras, o descanso para consentração dos açucares, a quebra do cacau, o transporte para a casa de fermentação, o processo de fermentação e a secagem e são exibidos os defeitos das amêndoas.
-
-%\subsection{Beneficiamento primário do cacau}
-
-% Beneficiamento do cacau
-
-%O folder \cite{folder_beneficiamento_ceplac} publicado pela CEPLAC do Pará fala sobre o passo a passo do beneficiamento, com figuras indicando ferramentas a passos do beneficiamento, e algumas tabelas com métricas para a construção de um cocho, e sobre os períodos de estiagem e chuva para que o cacau tenha uma boa fermentação.
-
-%\subsection{Caracterização de amêndoas e chocolate de diferentes variedades de cacau visando a melhoria da qualidade tecnológica}
-
-%O trabalho \cite{silva2013caracterizaccao} aborda sobre a qualidade do cacau, fatores que influenciam no sabor do chocolate, avaliação da qualidade do cacau, como a prova de corte e análise sensorial, o pré-processamento e processamento do cacau, que aborda desde a colheita e abertura dos frutos, até a moagem para obtenção do liquor e a prensagem para obtenção da torta e manteiga de cacau. Aborda também sobre o processamento do chocolate, tratando da mistura e refino, conchgem e temperagem, resfriamento e moldagem.
-
-%A pesquisa trabalha sobre duas safras, atuando na caracterisação fisico-quimica, realizando análise descritiva e quantitativa, e o teste de aceitação dos chocolates.
-
-
-%\subsection{Caracterização das sementes de variedades de cacau \textit{Theobroma cacao L.} resistentes à vassoura de bruxa durante a fermentação e após a secagem}
-
-%O trabalho \cite{cruz2013caracterizaccao} possui como foco a caracterização das sementes de cacau resistentes à vassora de bruxa.
-
-%No capítulo 1 apresenta o pré-processamento do cacau, que é abordado a colheita e quebra dos frutos, a fermentação, a secagem e o armazenamento. No tópico seguinte, aborda a avaliação da qualidade das amêndoas através da prova de corte. Aborda superficialmente a prova de corte.
-
-%No capítulo 2 é abordado apenas o cacau proveniente de variedades resistentes à vassoura de bruxa.
 
 \section{Linguagem Ruby}
 Desenvolvida em 1995 por Yukihiro Matsumoto, Ruby é uma linguagem interpretada que inicialmente tinha objetivos muito semelhantes a linguagem Python\cite{purer2009phpvspythonvsruby}. Dinâmico e de código fonte aberto, a linguagem tem foco na simplicidade e produtividade, possui uma sintaxe elegante, natural e fácil de ler e escrever \cite{siteruby}. \par
@@ -110,8 +82,9 @@ Ruby segue o princípio de pouca surpresa, isso significa que a linguagem foi co
 Em desenvolvimento de software, \textit{framework} é uma concepção de vários códigos comuns entre diversos projetos, buscando assim um kit de ferramentas genéricos para ser usado de acordo com a necessidade de cada projeto a ser implementado em cima dele. Segundo Fayad e Schmidt, framework é um conjunto de classes que colaboram para realizar uma responsabilidade para um domínio de um subsistema da aplicação\cite{frameworkwikipedia}. \par
 As principais vantagens de \textit{frameworks} são: maior facilidade para debugar algum erro de implementação, foco na abstração de soluções do problema proposto, eficiência na resolução dos problemas e melhora no uso dos recursos\cite{frameworkwikipedia}. \par
 O Ruby on Rails(RoR) teve sua primeira versão lançada em dezembro de 2005, foi desenvolvido pela 337Signal Inc com o objetivo de criar o projeto Basecamp, um gerenciamento colaborativo de projetos. Escrito em linguagem Ruby, RoR é um \textit{framework full-stack}(ou seja, possui ferramentas para desenvolvimento \textit{frontend} e \textit{backend}) para desenvolvimento de aplicativos web baseados em banco de dados\cite{plekhanova2009evaluating}. \par
-Esse \textit{framework} foi escolhido para o projeto por alguns motivos, tanto pessoais como técnicos. Foi levado em consideração uma forte familiaridade da equipe executante com a linguagem de programação Ruby, devido aos mesmos utilizarem ela na vida acadêmica e profissional. Diante disso, a execução do projeto seria mais ágil e eficaz. Quando comparado com outros \textit{frameworks}, como Laravel, RoR é um dos mais utilizados, tem atualizações frequentes e uma vasta comunidade de código aberto, nitidamente terá um futuro seguro no mundo na programação \cite{verma2014mvc}. \par
-Bootstrap é um \textit{framework web frontend} de código fonte aberto, baseando-se em modelo de design, teoria das cores, tipografia e Experiência do Usuário(UX – do inglês \textit{User Experience}) esse \textit{framework} serve para criar uma identidade visual forte e amigável para sistemas web, buscando melhorar o contato do usuário com o sistema\cite{bootstrapwikipedia}. Esse \textit{framework} conta atualmente com uma enorme popularidade que vem crescendo todos os dias \cite{jain2014review}. \par
+Esse \textit{framework} foi escolhido para o projeto por alguns motivos, tanto pessoais como técnicos. Foi levado em consideração uma forte familiaridade da equipe executante do atual projeto com a linguagem de programação Ruby, devido aos mesmos utilizarem ela na vida acadêmica e profissional. Diante disso, a execução do projeto seria mais ágil e eficaz. Quando comparado com outros \textit{frameworks}, como Laravel, RoR é um dos mais utilizados, tem atualizações frequentes e uma vasta comunidade de código aberto, nitidamente terá um futuro seguro no mundo na programação \cite{verma2014mvc}.
+
+Bootstrap é um \textit{framework web frontend} popular framework de código fonte aberto que oferece assistência a fácil e rápido desenvolvimento de aplicações web, baseando-se em modelo de design, teoria das cores e tipografia esse \textit{framework} serve para criar uma identidade visual forte e amigável para sistemas web, buscando melhorar o contato do usuário com o sistema\cite{shah2015responsive}. Esse \textit{framework} conta atualmente com uma enorme popularidade que vem crescendo todos os dias \cite{jain2014review}. \par
 
 %Na próxima seção é apresentado o OpenCV e alguns algoritmos que auxiliaram no processo de segmentação e que foram analisados neste trabalho.
 
@@ -172,12 +145,12 @@ No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda n
 \centering
 \caption{Tabela de comparação entre banco de dados relacionais e não relacionais}
 \label{tab:sqlvsnosql}
-\begin{flushright}
-\footnotesize
-(continua)
-\end{flushright}
+% \begin{flushright}
+% \footnotesize
+% (continua)
+% \end{flushright}
 \resizebox{\textwidth}{!}{%
-\begin{tabularx}{0.9\textwidth} { 
+\begin{tabularx}{1\textwidth} { 
   | >{\raggedright\arraybackslash}X 
   | >{\raggedright\arraybackslash}X 
   | >{\raggedright\arraybackslash}X | }
@@ -187,29 +160,10 @@ No projeto em questão será utilizado o modelo relacional, pois o NoSQL ainda n
  Autenticação  & Todos os bancos de dados relacionais vieram com mecanismo de autenticação e podem escolher qualquer um desses mecanismos a serem usados.  & Muitos bancos de dados NoSQL, por padrão, não vêm com mecanismo de autenticação ou autorização, mas podem usar algum método externo para executar esta operação.  \\
 \hline
 Integridade dos dados & As propriedades ACID(acrônimo de Atomicidade, Consistência, Isolamento e Durabilidade) usadas nos bancos de dados relacionais garantem que as transações do banco de dados sejam processadas com confiabilidade, garantindo a integração dos dados. & Eventualmente consistente é um dos princípios das propriedades BASE, portanto, a integridade dos dados nem sempre é alcançada nos bancos de dados NoSQL. \\
-\end{tabularx}%
-}
-\end{table}
-\pagebreak
-
-\begin{table}[ht]
-\centering
-Tabela \ref{tab:sqlvsnosql} – Tabela de comparação entre banco de dados relacionais e não relacionais
-\begin{flushright}
-\footnotesize
-(conclusão)
-\end{flushright}
-\resizebox{\textwidth}{!}{%
-\begin{tabularx}{0.9\textwidth} { 
-  | >{\raggedright\arraybackslash}X 
-  | >{\raggedright\arraybackslash}X 
-  | >{\raggedright\arraybackslash}X | }
- \hline
- Categoria & Modelo relacional & Modelo não-relacional \\
 \hline
 Confidencialidade & A confidencialidade dos dados geralmente é alcançada no banco de dados relacional porque foi usada técnicas de criptografia para armazenar dados criptografados. & A confidencialidade dos dados não é alcançada, porque geralmente os dados são armazenados de forma clara. \\
-\hline
-Auditoria & Fornecer mecanismos auditar que permita escrever para o arquivos syslog ou xml do banco de dados, e alguns dar uma auditoria mais avançada. & A maioria do NoSQL bancos de dados não fornecer auditoria. Existem alguns bancos de dados que fornecem auditoria como Couchdb que guarda o nome de usuário e senha no log arquivo que é claro compromete a segurança. \\
+% \hline
+% Auditoria & Fornecer mecanismos auditar que permita escrever para o arquivos syslog ou xml do banco de dados, e alguns dar uma auditoria mais avançada. & A maioria do NoSQL bancos de dados não fornecer auditoria. Existem alguns bancos de dados que fornecem auditoria como Couchdb que guarda o nome de usuário e senha no log arquivo que é claro compromete a segurança. \\
 \hline
 Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo seguro de comunicação com o cliente usando protocolos de criptografia e \textit{Secure Sockets Layer}(SSL). & A maioria dos bancos de dados NoSQL não oferecem mecanismos de comunicação segura com o cliente. \\
 \hline
@@ -217,23 +171,31 @@ Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo 
 }
 \end{table}
 
-%OpenCV-Python é uma API Python para OpenCV, combinando as melhores qualidades da API OpenCV para C++ e a linguagem Python \cite{opencv_python_api}.
-
-%A biblioteca OpenCV-Python é destinada a resolução de problemas de visão computacional, ela faz uso do Numpy, que é uma biblioteca altamente otimizada para operações numéricas que utiliza o estilo de sintaxe do MATLAB. Todas as estruturas de array do OpenCV são convertidas para e de arrays Numpy. Isso permite facilitar a integração com outras bibliotecas que utilizam Numpy como a SciPy e Matplotlib \cite{opencv_python_api}.
-
-%O threshold se baseia na diferença de tons de cinza que compõem diferentes objetos na imagem. A partir das características dos objetos que se quer isolar (obtidos por meio de um histograma por exemplo), a imagem será segmentada em dois grupos: os que possuem níveis de cinza abaixo do valor estabelecido, e os que possuem níveis de cinza acima do valor estabelecido. Para a geração de uma imagem limiarizada, atribui-se um valor fixo para todos os pixels de um mesmo grupo. A imagem gerada será binária, ou seja,  terá  apenas  dois valores  possíveis  para  cada  pixel. Na Figura \ref{Thresholding} podemos ver um exemplo de utilização de thresholding em olhos.
-
-%\begin{figure}[hbpt!]
+% \begin{table}[ht]
 % \centering
-% \caption{Exemplo de utilização do thresholding}
-% \includegraphics[angle=270,scale=0.4]{figs/algoritmos/pathologies_thresholding.png}
-% \legend{Fonte: \cite{pathologies_thresholding}}
-% \label{Thresholding}
-%\end{figure}
+% Tabela \ref{tab:sqlvsnosql} – Tabela de comparação entre banco de dados relacionais e não relacionais
+% \begin{flushright}
+% \footnotesize
+% (conclusão)
+% \end{flushright}
+% \resizebox{\textwidth}{!}{%
+% \begin{tabularx}{1\textwidth} { 
+%   | >{\raggedright\arraybackslash}X 
+%   | >{\raggedright\arraybackslash}X 
+%   | >{\raggedright\arraybackslash}X | }
+%  \hline
+%  Categoria & Modelo relacional & Modelo não-relacional \\
+% \hline
+% Comunicação com o cliente & Os bancos de dados relacionais oferecem mecanismo seguro de comunicação com o cliente usando protocolos de criptografia e \textit{Secure Sockets Layer}(SSL). & A maioria dos bancos de dados NoSQL não oferecem mecanismos de comunicação segura com o cliente. \\
+% \hline
+% \end{tabularx}%
+% }
+% \end{table}
+% \pagebreak
 
 \section{Engenharia de software}
 
-Engenharia de software é uma área da computação voltada à especificação, desenvolvimento, manutenção e criação de software, com a  aplicação de tecnologias e práticas de gerência de projetos e outras disciplinas, visando organização, produtividade e qualidade\cite{engenhariawikipedia}. Por um lado engenharia de software possui características explícitas de produção e engenharia devido ao processo de criação do produto(software). Por outro lado é exigido uma melhoria contínua e sequencial da qualidade do produto e do processo de criação do software, nesse contexto é enxergado como ciência\cite{travassos2002introducao}.
+Segundo \cite{van2008software}, engenharia de software é o estabelecimento e uso dos princípios da engenharia para construir um software que funcione em máquinas reais e seja confiável. Por um lado engenharia de software possui características explícitas de produção e engenharia devido ao processo de criação do produto(software). Por outro lado é exigido uma melhoria contínua e sequencial da qualidade do produto e do processo de criação do software, nesse contexto é enxergado como ciência\cite{travassos2002introducao}.
 
 %O OpenCV conta com mais de 150 métodos de conversão do espaço de cores, mas o BGR <-> Cinza e BGR <-> HSV são os mais utilizados. A função tem o escopo Imgproc.cvtColor(imagem\_entrada, imagem\_saida, flag) onde \textit{flag} determina o tipo de conversão.
 
@@ -243,7 +205,7 @@ Engenharia de software é uma área da computação voltada à especificação, 
 \label{subsec:thresholding}
 
 O padrão \textit{model-view-controller}(MVC) é um padrão de projeto(do inglês \textit{design pattern}) de apresentação/abstração/controle utilizado para arquitetar sistemas de softwares \cite{leff2001webmvc}. O paradigma MVC separa a aplicação em três tipos de objetos, cada um especializado em sua tarefa, são elas: Modelo(\textit{Model}), Visão(\textit{View}) e Controlador(\textit{Controller}). \par
-O \textit{Model} gerencia e valida o comportamento dos dados da aplicação, conversando com o banco de dados, por exemplo. A \textit{View} é a parte gráfica da aplicação ao qual irá interagir visualmente com o usuário. O \textit{Controller} interpreta, ordena e responde a requisições feitas pelos usuários\cite{burbeck1997applications}. A figura \ref{fig:mvc} exemplifica muito bem a abordagem do MVC. \par
+O \textit{Model} gerencia e valida o comportamento dos dados da aplicação, conversando com o banco de dados, por exemplo. A \textit{View} é a parte gráfica da aplicação ao qual irá interagir visualmente com o usuário. O \textit{Controller} interpreta, ordena e responde a requisições feitas pelos usuários\cite{burbeck1997applications}. A Figura \ref{fig:mvc} exemplifica muito bem a abordagem do MVC. \par
 
 \begin{figure}[htbp!]
   \centering
@@ -261,37 +223,70 @@ O \textit{Model} gerencia e valida o comportamento dos dados da aplicação, con
 
 Segundo \cite{mathur1991performance}, “A confiabilidade do software é uma medida do desempenho de um programa em seu ambiente operacional”. Para elevar a confiabilidade é necessário recorrer a métodos de testes. Existem vários tipos de testes de softwares, e cada um se aplica em um estágio do desenvolvimento do software, pois cada um tem objetivos diferentes\cite{nidhra2012black}. \par
 No projeto proposto será implementado tais testes: \par
-\begin{itemize}  
+\begin{itemize}
 \item Testes unitários, aos quais testa um componente isolado ou classe do sistema;
 \item Testes de integração, aos quais combinam vários componentes do software para testar se funcionam de maneira satisfatória;
-\item Teste de segurança, responsável por testar se os dados são acessados de maneira segura;
+\item Teste de segurança, responsável por testar se os dados são acessados de maneira segura.
 % \item Teste funcional, encarregado de testar se os requisitos funcionais foram alcançados.
 \end{itemize}
 Testes funcionais, de sistema, de aceitação e beta não foram incluídos devido a sua característica de necessitar pessoas independentes ao projeto para testar o software.
 
+
 \section{Projetos de código fonte aberto}
+
 OSS(\textit{Open Source Software}) é um termo usado para designar um software desenvolvido e lançado sob algum tipo de licença de código aberto. Atualmente existem várias licenças com uma gama de características diferentes, mas todas necessitam da permissão do código fonte do software\cite{crowston2003defining}.
 
 Algumas vantagens de projetar um OSS são:
 \begin{itemize}  
-\item Oferta gratuita de código aumentará a participação de mercado\cite{fitzgerald2006transformation}
-\item Construir uma base de desenvolvimento em torno da ferramenta aumentar a sustentabilidade a longo prazo\cite{nyman2011forking}
-\item O conjunto crescente de partes interessadas resulta em melhorias adicionais sucessivas no software\cite{heron2013open}
-\item Replicação dos resultados obtidos neste projeto
+\item Oferta gratuita de código aumentará a participação de mercado\cite{fitzgerald2006transformation};
+\item Construir uma base de desenvolvimento em torno da ferramenta aumentar a sustentabilidade a longo prazo\cite{nyman2011forking};
+\item O conjunto crescente de partes interessadas resulta em melhorias adicionais sucessivas no software\cite{heron2013open};
+\item Replicação dos resultados obtidos neste projeto.
 \end{itemize}
 
 
 \section{Trabalhos correlatos}
 \label{sec:java}
 
-Foram pesquisados alguns trabalhos, porém nenhum se encaixou perfeitamente com os objetivos do projeto aqui desenvolvido. Entretanto, alguns projetos têm cunho semelhante. \par
-O sistema Ifood é usado para delivery de comida, buscando conectar vendedores com clientes. Disponível para plataformas Android, IOS e web o sistema recebe mais de 6,2 milhões de pedidos mensais\cite{bastos2018marketing}. Após efetuar seu login, o cliente pode realizar seu pedido informando a localização onde deseja que a entrega seja feita. A forma de pagamento pode ser feita pelo próprio sistema. A figura \ref{fig:ifood} apresenta o fluxo básico para realizar e acompanhar pedidos realizados pelo aplicativo.
+Foram pesquisados alguns trabalhos, porém nenhum se encaixou perfeitamente com os objetivos do projeto, ao qual tem como premissa estar inserido no ambiente acadêmico. Entretanto, alguns projetos têm cunho semelhante, como o Mercado Livre e OLX. \par
 
-\pagebreak
+\subsection{Mercado Livre}
+
+O Mercado Livre é uma empresa de tecnologia que tem como objetivo democratizar o comércio eletrônico oferecendo uma ótima plataforma e serviços que seja possível comprar, pagar, vender e anunciar seus negócios na internet \cite{brasil_2019}.
+
+Como pode ser observado na Figura \ref{fig:livre_5}, o Mercado Livre é o 5º site mais acessado do Brasil em 2017, o Mercado Livre conta com mais de 211 milhões de usuários registrados na América Latina, 52 milhões de visitantes únicos por mês e é o maior site de \textit{e-commerce} do Brasil.
+
 \begin{figure}[htbp!]
   \centering
-  \caption{Fluxo de uso do aplicativo ifood}
-  \includegraphics[width=1\textwidth]{figs/ifood2.jpg}
-    \legend{Fonte: https://cadernomercado.com.br/pesquisa-do-ifood-revela-habitos-de-consumo-no-delivery/ acessado dia 15 de dezembro de 2019 às 23:26}
-    \label{fig:ifood}
+  \caption{Mercado Livre é o 5º site mais acessado do Brasil}
+  \includegraphics[width=0.9\textwidth]{figs/ml1.jpg}
+    \legend{Fonte: https://ideias.mercadolivre.com.br/sobre-mercado-livre/tudo-o-que-voce-precisa-saber-sobre-o-mercado-livre/ acessado dia 4 de fevereiro de 2020 às 17:38}
+    \label{fig:livre_5}
+\end{figure}
+
+O Mercado Livre oferece um conjunto de soluções para melhorar e potencializar a eficácia de comprar e vender pela internet, fomentar o desenvolvimento de uma comunidade empreendedora e diversificar os produtos disponíveis no mercado. A Figura \ref{fig:livre} apresenta o Modelo Canvas do Mercado Livre.
+
+\subsection{OLX}
+
+OLX é uma empresa global de \textit{e-commerce} do tipo C2C, sediada em Amsterdam, Países Baixos. Fundada em 2006, a empresa chegou ao Brasil apenas em 2010 por meio de parcerias com dois grupos de mídias e investimentos em marketplaces, Naspers e Schibsted.
+
+O modelo de negócio da OLX tem como objetivo articular e facilitar a venda de produtos novos e usados entre vendedores e compradores. OLX tem como público alvo as pessoas físicas, permitindo que elas anunciem facilmente seus produtos com fotos, descrição, preço e oferece uma comunicação direta entre o comprador e o vendedor por meio de um chat na própria plataforma.
+
+A grande vantagem da OLX é não realizar cobrança de taxas pelos anúncios no sistema, isso faz com que os preços dos itens sejam mais em conta. A plataforma oferece vários filtros para pesquisa dos produtos anunciados, tais filtro são associados a categoria do produto, como também em relação ao local em que se encontra esse produto dividindo em estados, cidades, ou zonas de DDD. A Figura \ref{fig:olx} apresenta o Modelo Canvas do OLX.
+
+\begin{figure}[h]
+  \centering
+  \caption{Modelo Canvas do Mercado Livre}
+  \includegraphics[width=1\textwidth]{figs/canvas_livre_1.png}
+    \legend{Fonte: https://analistamodelosdenegocios.com.br/modelo-de-negocio-mercado-livre/ acessado dia 5 de fevereiro de 2020 às 11:04}
+    \label{fig:livre}
+\end{figure}
+
+\clearpage
+\begin{figure}[ht]
+  \centering
+  \caption{Modelo Canvas do OLX}
+  \includegraphics[width=1\textwidth]{figs/canvas_olx_1.png}
+    \legend{Fonte: https://analistamodelosdenegocios.com.br/modelo-de-negocio-olx/ acessado dia 5 de fevereiro de 2020 às 11:10}
+    \label{fig:olx}
 \end{figure}
